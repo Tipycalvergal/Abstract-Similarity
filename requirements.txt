@@ -1,4 +1,4 @@
-dash
+streamlit
 pandas
 numpy
 spacy
