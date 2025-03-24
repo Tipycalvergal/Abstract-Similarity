@@ -2,12 +2,21 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import spacy
+import spacy.cli
 import plotly.express as px
 import re
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.manifold import TSNE
 
 st.set_page_config(page_title="Talks Similarity Viewer", layout="wide")
+
+# 🔧 Download spaCy model if not available
+try:
+    nlp = spacy.load('en_core_web_lg')
+except OSError:
+    with st.spinner("Downloading spaCy model..."):
+        spacy.cli.download("en_core_web_lg")
+    nlp = spacy.load('en_core_web_lg')
 
 # 🔧 Functions
 def smart_title(text):
@@ -46,7 +55,6 @@ with st.spinner("Loading data..."):
     df["TYPE_RAW"] = df["TYPE"]
     df["SIMPLIFIED_TYPE"] = df["TYPE"].apply(smart_title)
 
-    nlp = spacy.load('en_core_web_lg')
     combined_vectors = list(nlp.pipe(df["COMBINED"].tolist()))
     vector_list = np.array([doc.vector for doc in combined_vectors])
 
