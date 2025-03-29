@@ -48,7 +48,7 @@ st.markdown("This app visualizes similarity between talks using **spaCy embeddin
 
 # 📄 Load data
 with st.spinner("Loading data..."):
-    df = pd.read_csv('registration-roster - talks.csv', usecols=["TITLE", "ABSTRACT", "TYPE", "FIRST_NAME", "LAST_NAME"])
+    df = pd.read_csv('talks.csv', usecols=["TITLE", "ABSTRACT", "TYPE", "FIRST_NAME", "LAST_NAME"])
     df.fillna("", inplace=True)
     df["COMBINED"] = df["TITLE"] + " " + df["ABSTRACT"]
     df["FULL_NAME"] = df["FIRST_NAME"] + " " + df["LAST_NAME"]
