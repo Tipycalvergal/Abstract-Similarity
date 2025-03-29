@@ -1,0 +1,765 @@
+TID,FIRST_NAME,LAST_NAME,TYPE,TITLE,ABSTRACT
+1,Jenny,Salinasan,MS31: Matrix decompositions and applications,The $\phi_S$ polar decomposition when $S$ is skew-symmetric,"Let $F$ be a field with characteristic not equal to $2$, and $S \in M_{2n}(F)$ be skew-symmetric $(S^{\top}=-S)$ and nonsingular.
+Let $\phi_S$ be the function defined by $\phi_S(A)=S^{-1}A^{\top}S$ for all $A \in M_{2n}(F)$.
+Suppose $A \in M_{2n}(F)$.
+We say that $A$ is $\phi_S$-orthogonal if $A$ is nonsingular and $\phi_S(A)=A^{-1}$; and $A$ is $\phi_S$-symmetric if $\phi_S(A)=A$.
+We say that $A$ has a $\phi_S$ polar decomposition if $A=XY$ for some $\phi_S$-orthogonal $X \in M_{2n}(F)$ and $\phi_S$-symmetric $Y\in M_{2n}(F)$. 
+We give necessary and sufficient conditions for an $X \in M_{2n}(F)$ to have a $\phi_S$ polar decomposition."
+2,Milica,Anđelić,MS21: Linear algebra techniques in graph theory,Laplacian eigenvalues of weighted threshold graphs,We provide a closed formula to compute the Laplacian spectrum of weighted threshold graphs. We also show that their Laplacian eigenvalues are the parts of the conjugate partition of the associated weighted Ferrers diagrams.
+3,Somdeb,Lahiri,Contributed talk,Uniqueness of solution for linear optimization,"We provide an easy proof of theorem 1 in Mangasarian (1979), based on a new result in terms of two statements that are each equivalent to a given solution of a linear programming problem being its unique solution."
+4,Hamide,Dogan,Contributed talk,Recursions among and classification of singular $k$-tridiagonal Toeplitz matrices,"We introduce a novel L/N factorization approach, inspired by Doolittle's L/U factorization, for 
+$k$-tridiagonal Toeplitz matrices, $T^{(k)}_n$, where $n=km+s$ and $\det(T^{(1)}_p)=0$ for $p<m$. This factorization allows for the derivation of recursion expressions and provides a classification of singular Toeplitz matrices."
+5,Hung-Yuan,Fan,MS11: Structured matrix computations and its applications,Inheritance properties of conjugate discrete-time algebraic Riccati equations,"In this talk we consider a class of conjugate discrete-time Riccati equations, arising originally from the linear quadratic regulator problem for discrete-time antilinear systems. Under mild and reasonable assumptions, the existence of the maximal solution to the conjugate discrete-time Riccati equation, in which the control weighting matrix is nonsingular and its constant term is Hermitian, will be inherited to a transformed discrete-time algebraic Riccati equation. Based on this inheritance property, an accelerated fixed-point iteration is proposed for finding the maximal solution via the transformed Riccati equation. Numerical examples are shown to illustrate the correctness of our theoretical results and the feasibility of the proposed algorithm."
+6,Shinya,Miyajima,MS1: Embracing new opportunities in numerical linear algebra,Some norm bounds on the complimentary error matrix functions,"Let $A \in \mathbf{C}^{n \times n}$ be a square matrix such that ${\rm Re}(\lambda) > |{\rm Im}(\lambda)|$, $\forall \lambda \in \sigma(A)$, where $\sigma(A)$ is the spectrum of $A$. 
+The error matrix function ${\rm erf}(A)$ and complimentary error matrix function ${\rm erfc}(A)$, which are introduced in \cite{Cortes}, are defined as 
+$$
+{\rm erf}(A) := \frac{2A}{\sqrt{\pi}}\int_{0}^{1} e^{-(Av)^{2}} dv \quad \mbox{and} \quad {\rm erfc}(A) := \frac{2A}{\sqrt{\pi}}\int_{1}^{\infty} e^{-(Av)^{2}} dv,
+$$
+respectively. 
+
+One of the most important application of the complimentary error matrix function is the solution to systems of partial differential equation. 
+Let $u_0, u(x,t) \in \mathbf{C}^n$. 
+It is proven in \cite{Cortes} that the solution to semi-finite coupled diffusion problem 
+\begin{eqnarray*}
+u_{t} &=& A^2u_{xx}, \ x>0, \ t>0, \\
+u(x,0) &=& 0, \ x>0, \quad 
+u(0,t) = u_{0}, \ t>0, \quad 
+u(x,t) \to 0, \ \textrm{as} \ x\rightarrow\infty, \ t > 0
+\end{eqnarray*}
+can be represented by using the complimentary error matrix function as follows:
+$$
+u(x,t) = {\rm erfc}\left(\frac{A^{-1}x}{2\sqrt{t}}\right)u_{0}, \quad x>0, \quad t>0. 
+$$
+
+Analogously to the scaler case, the functions ${\rm erf}(A)$ and ${\rm erfc}(A)$ satisfy the property ${\rm erf}(A) + {\rm erfc}(A) = I$, where $I$ is the $n \times n$ identity matrix. 
+According to the Taylor expansion of $e^{-(Av)^{2}}$ where $v \in [0,1]$, and integrating term by term, we obtain 
+$$
+{\rm erf}(A) = \frac{2A}{\sqrt{\pi}}\sum_{k=0}^{\infty}\frac{(-1)^k A^{2k}}{k! (2k+1)}, 
+$$
+which is the Taylor expansion of ${\rm erf}(A)$ \cite{Cortes}. 
+From this expansion and ${\rm erf}(A) + {\rm erfc}(A) = I$, we obtain 
+$$
+{\rm erfc}(A) = I - \frac{2A}{\sqrt{\pi}}\sum_{k=0}^{\infty}\frac{(-1)^k A^{2k}}{k! (2k+1)}. 
+$$
+In \cite{Cortes}, an upper bound on $\|{\rm erfc}(A)\|_2$ under the condition ${\rm Re}(\lambda) > |{\rm Im}(\lambda)|$, $\forall \lambda \in \sigma(A)$ has been derived as a corollary of the fact that ${\rm erfc}(A)$ is well-defined. 
+
+The purpose of this talk is to present the following norm bounds: 
+\begin{itemize}
+\item a new upper bound on $\|{\rm erfc}(A)\|_2$ under a condition which is different from ${\rm Re}(\lambda) > |{\rm Im}(\lambda)|$, $\forall \lambda \in \sigma(A)$, 
+\item upper bounds on $\|{\rm erf}(A) - {\rm erf}(B)\|_2$ and $\|{\rm erfc}(A) - {\rm erfc}(B)\|_2$, where $B \in \mathbf{C}^{n \times n}$, under an assumption, and 
+\item upper bounds on 
+$$
+\left\|{\rm erf}(A) - \frac{2A}{\sqrt{\pi}}\sum_{k=0}^{m}\frac{(-1)^k A^{2k}}{k! (2k+1)}\right\|_2 \ \mbox{and} \ 
+\left\|{\rm erfc}(A) - \left(I - \frac{2A}{\sqrt{\pi}}\sum_{k=0}^{m}\frac{(-1)^kA^{2k}}{k!(2k+1)}\right)\right\|_2,
+$$ 
+where $m$ is a nonnegative integer, under an assumption. 
+\end{itemize}
+We report results of numerical experiments in order to observe how much larger the presented bounds are compared to the corresponding norms. 
+This talk is based on the joint work with Prof. Amir Sadeghi in Islamic Azad University. 
+
+\begin{thebibliography}{5}
+\bibitem{Cortes}
+J. Cort$\acute{{\rm e}}$s, R. Company, L. J$\acute{{\rm o}}$dar, 
+The complementary error matrix function and its role solving coupled diffusion mathematical models, 
+Math. Comput. Modell, 42(9--10), 1023--1034 (2005). 
+\end{thebibliography}"
+7,Hareshkumar,Jadav,Contributed talk,Generalizing Wilf's inequality for strongly regular graphs,"The clique number $\omega$ is the size of the largest clique in any graph. Determining the clique number is an NP-complete problem, which implies that there is no polynomial-time algorithm to solve it. Wilf's inequality provides a spectral bound for the clique number of simple graphs, given by $\frac{n}{n - \lambda_{1}} \leq \omega$, where $\lambda_1$ is the largest eigenvalue of the adjacency matrix, and $n$ is the number of vertices in the graph. Strengthening this bound, Elphick and Wocjan proposed a conjecture in 2018 that is $\frac{n}{n - \sqrt{s^{+}}} \leq \omega$, where $s^+ = \sum_{\lambda_{i} > 0} \lambda_{i}^2$ and $\lambda_i$ are eigenvalues of the adjacency matrix. In this work, we have settled this conjecture for seven different classes of graphs: (1) Paley graphs which are strongly regular graphs with parameters $srg(4\beta + 1, 2\beta, \beta - 1, \beta)$, where $q$ is a prime power and $q \equiv 1 \pmod{4}$; (2) strongly regular graphs with $\alpha = \beta$ (i.e., $srg(n, d, \beta, \beta)$); (3) the line graph of $K_{m,m}$; (4) the line graph of $K_{n}$; (5) the Cartesian product of strongly regular graphs $G$ with $G$, where $G$ is a strongly regular graph; (6) general Rook's graphs; and (7) Ramanujan graphs, where the second largest eigenvalue follows the property $\lambda_2 \leq 2\sqrt{d-1}$."
+8,Sing-Yuan,Yeh,MS20: Manifold learning and statistical applications,Landmark diffusion accelerates alternating diffusion maps for multi-sensor fusion,"Alternating Diffusion (AD) is a commonly applied diffusion-based sensor fusion algorithm. While it has been successfully applied to various problems, its computational burden remains limited. Inspired by the landmark diffusion idea considered in the Robust and Scalable Embedding via Landmark Diffusion (ROSELAND), we propose a variation of AD, called Landmark AD (LAD), which captures the essence of AD while offering superior computational efficiency. Through a series of theoretical analyses, we investigate the sample complexity of LAD within the manifold setup. We then apply LAD to address the automatic sleep stage annotation problem using two electroencephalogram channels, demonstrating its efficacy in practical applications."
+9,Tian-Xiao,He,MS25: Enumerative/algebraic combinatorics and matrices,High-order eulerian numbers and matrices,We study the properties of the higher-order Eulerian numbers and the higher-order Eulerian matrices. The row generating functions and the row sums of the higher-order Eulerian matrices are given. We also define higher-order Eulerian fractions and their alternative forms. Some properties of higher-order Eulerian fractions are expressed using differentials and integrals. The inversion relationships between second-order Eulerian numbers and Stirling numbers of the second and first kinds are given. We also give exact expressions for the entries of higher-order Eulerian matrices.
+10,Yuki,Nishida,Contributed talk,Comparison of several schemes for the CSR expansion of max-plus matrices,"Max-plus algebra is a semiring with addition $a\oplus b := \max(a,b)$ and $a\otimes b := a+b$. The CSR expansion of a max-plus square matrix $A$ is a decomposition of the matrix power $A^{\otimes t}$ into the sum of matrices of the forms $C \otimes S^{\otimes t} \otimes R$, where $S$ is a permutation matrix. Several schemes for the CSR expansion have been introduced, such as Nachtigall (1997), Hartmann-Arguelles (1999) and Merlet et al.~(2014). In Nishida (2025), the author proposes a new scheme for the CSR expansion based on the factorization of the characteristic polynomial of a max-plus matrix. In this study, we compare the CSR expansions given by these schemes from the viewpoint of the transient bound, which is the minimum exponent $t$ such that the expansion is valid, and the number of terms in the expansion."
+11,Amin,Faghih,MS23: Advances in Krylov subspace methods and their applications,Krylov subspaces and Sobolev functions,"In this talk, we will discuss how to generate Sobolev rational functions that are orthonormal with respect to a discrete Sobolev inner product through a long recurrence relation. The recurrence coefficients of this relation can be stored in a Hessenberg pencil. Two important numerical methods are those based on Krylov subspace methods and those based on restoring matrix structures. The methods are based on the connection between Sobolev orthonormal rational functions and the orthonormal bases for rational Krylov subspaces generated by a Jordan-like matrix."
+12,Wasin,So,Contributed talk,Formal orthogonal systems,"Dreaming of an effective way to generate orthogonal bases in ${\bf R}^n$, 
+we study  formal orthogonal systems which are  collections of nonzero $n \times n$  real matrices 
+\[ \{A_0=I_n, A_1, A_2, \ldots,A_{n-1}\}\]
+such that $\{A_0x, A_1x,A_2x,\cdots,A_{n-1}x\}$
+ is an orthogonal set for all $x$ in ${\bf R}^n$. We prove that 
+ formal orthogonal systems of order $n$ exist if and only if $n=1, 2,4,$ or  $8$.
+ The proof has an unexpected connection to the famous results of Adolf Hurwitz
+  on the product of two sums of $n$ squares.
+ 
+ \vspace{.3in}
+ 
+ Joint work with Ardak Kapbasov and Shaunak Mashalkar."
+13,Fernando,De Terán,Plenary talk,The canonical form for congruence: some history and applications,"A square matrix $A$ can be either seen as a linear map or as a bilinear form. When considered as a linear map, it is natural to introduce the relation of ``similarity'', $P^{-1}AP$ (with $P$ invertible), which is a change of basis that allows us to represent the linear map in a simpler form, in particular in the well-known ``Jordan canonical form''. When considering the matrix $A$ as a bilinear form, the natural relation instead is the one of ``congruence'', $P^\top AP$ (with $P$ invertible), which is the suitable change of basis for bilinear forms. Is there a canonical form for such a relation? The answer is yes, and actually some different canonical forms for congruence have been introduced over the years since the 1930's. In this talk I will introduce the most recent one (by Horn and Sergeichuk, 2006), review the history of this and the other canonical forms, and show some applications in the context of my past and current research, including:
+\begin{itemize}
+    \item The solution of the equation $AX+X^\top A=0$ and its connection to $\top$-palindromic pencils.
+    \item The consistency of the equation $X^\top AX=B$ when $B$ is either symmetric or skew-symmetric.
+\end{itemize}"
+14,Fernando,De Terán,"MS5: Advances in matrix equations: Theory, computations, and applications",The uniqueness of solution of systems of generalized Sylvester and $\star$-Sylvester equations,"The {\em generalized Sylvester equation}
+$$
+AXB-CXD=E
+$$
+has been a subject of interest since, at least, the early 20th century. More recently, the {\em$\star$-generalized Sylvester equation}
+$$
+AXB-CX^\star D=E,
+$$
+with $\star$ being either the transpose or the conjugate transpose, has attracted some attention within the linear algebra community.
+
+In this talk, we provide necessary and sufficient conditions for the uniqueness of solution of homogeneous systems of generalized Sylvester and $\star$-Sylvester equations, namely
+$$
+A_iX_{\alpha_i}^{s_i}B_i-C_iX_{\beta_i}^{t_i}D_i=0,\qquad i=1,\hdots,r,
+$$
+with $s_i,t_i\in\{1,\star\}$. 
+
+We focus on the case where the system has the same number of equations and unknowns (namely, $r$), and where all coefficient matrices (and unknowns) are square and with the same size."
+15,Fernando,De Terán,MS27: Linear algebra education,A linear algebra online course experience at UC3M: development and teaching,I will review my experience with a SPOC (Small Private Online Course) with flipped classroom that we developed to teach basic Linear Algebra at UC3M. We used this course for 6 academic years in a first-year Linear Algebra course for engineers.
+16,Tanay,Saha,Contributed talk,"Computing the nearest structured non-prime polynomial matrix: theory, algorithms, and numerical approaches","We first address the problem of computing the nearest non-prime polynomial matrix to a given left-prime polynomial matrix, without imposing structural constraints. This problem extends the classical task of finding the nearest non-coprime polynomials to a set of coprime polynomials. Our approach begins by establishing the equivalence between the left-primeness property of a polynomial matrix and the rank deficiency of a specific block Toeplitz matrix derived from the polynomial matrix. By leveraging this equivalence, we reformulate the problem as finding the nearest Structured Low-Rank Approximation (SLRA) to the associated block Toeplitz matrix, with a particular focus on cases where the leading coefficient matrix of the left-prime polynomial matrix has full row rank.
+
+We further generalize the problem to compute a non-prime matrix that is as close as possible to a given left-prime polynomial matrix while preserving a predefined structural form. In this setting, the problem is again recast as computing the nearest SLRA of a structured matrix in case of full rank leading coefficient matrix. For computing SLRA, we employ numerical techniques such as the STLN method and regularized factorization, both of which are well-documented in the literature.
+
+Additionally, we prove that it is possible to approximate a left-prime polynomial matrix with a rank-deficient leading coefficient matrix by a non-prime polynomial matrix, without adhering to the underlying structure. For cases involving structured coefficient matrices, we reformulate the problem as a constrained optimization task. By applying numerical optimization methods, we solve this optimization problem effectively.
+
+Finally, we demonstrate the efficacy of our proposed algorithm with several numerical examples and compare the results with existing approaches in the literature wherever possible."
+17,Luis Miguel,Anguas Márquez,Contributed talk,New approaches to the solutions of bispectral problems,"A family of polynomials is a solution to a bispectral problem if it forms a sequence of eigenfunctions of both a finite-order differential operator $L$ and a difference operator $J$. In 1929, S. Bochner studied the case where the differential operator is of order $2$, identifying the sequences of classical orthogonal polynomials as solutions to the bispectral problem. Since then, several contributions have been made to the study of the bispectral problem, but the case of arbitrary order remains open.
+
+The aim of this talk is to present new tools that have helped us obtain results on whether certain differential operators produce sequences of eigenpolynomials that solve the bispectral problem. We will draw examples of such differential operators from the existing literature on bispectral problems."
+18,Shivani,Goel,MS21: Linear algebra techniques in graph theory,Resistance distance in directed graphs,"Let $G=(V, E)$ be a strongly connected and balanced digraph with vertex set $V={1,\dotsc,n}$. The Laplacian matrix of $G$ is then the matrix (not necessarily symmetric) $L:=D-A$, where $A$ is the adjacency matrix of $G$ and $D$ is the diagonal matrix such that the row sums and the column sums of $L$ are equal to zero.
+Let $L^{\dag}=[l^{\dag}_{ij}]$ be the Moore-Penrose inverse of $L$.
+We define the resistance between any two vertices $i$ and $j$ of $G$ by $r_{ij}:=l^{\dag}_{ii}+l^{\dag}_{jj}-2l^{\dag}_{ij}$.
+Some interesting properties of the resistance and the corresponding resistance matrix $[r_{ij}]$ will be discussed in the talk.
+
+The classical distance $d_{ij}$ between any two vertices $i$ and $j$ in $G$ is the minimum length of all the
+directed paths joining $i$ and $j$.
+Numerical examples show that
+the resistance distance between $i$ and $j$ is always less than or equal to the classical distance, i.e.
+$r_{ij} \leq d_{ij}$. However, no proof of this inequality is known. In the talk, we will show that this inequality holds for all directed cactus graphs. This is a joint work with Dr. R. Balaji and Professor R. B. Bapat.
+
+Keywords: Laplacian matrix, Moore-Penrose inverse, Balanced directed graph, cofactor sums, Directed cactus graph"
+19,Jenny,Salinasan,MS31: Matrix decompositions and applications,The $\phi_S$ polar decomposition when $S$ is skew-symmetric,"Let $F$ be a field with characteristic not equal to $2$, and $S \in M_{2n}(F)$ be skew-symmetric $(S^{\top}=-S)$ and nonsingular.
+Let $\phi_S$ be the function defined by $\phi_S(A)=S^{-1}A^{\top}S$ for all $A \in M_{2n}(F)$.
+Suppose $A \in M_{2n}(F)$.
+We say that $A$ is $\phi_S$-orthogonal if $A$ is nonsingular and $\phi_S(A)=A^{-1}$; and $A$ is $\phi_S$-symmetric if $\phi_S(A)=A$.
+We say that $A$ has a $\phi_S$ polar decomposition if $A=XY$ for some $\phi_S$-orthogonal $X \in M_{2n}(F)$ and $\phi_S$-symmetric $Y \in M_{2n}(F)$.
+We give necessary and sufficient conditions for an $X \in M_{2n}(F)$ to have a $\phi_S$ polar decomposition."
+20,Eloise,Misa,MS31: Matrix decompositions and applications,The algebra generated by nilpotent elements in a matrix centralizer,"For an arbitrary square matrix $S$, denote by $C(S)$ the centralizer of $S$, and by $C(S)_N$ the set of all nilpotent elements in $C(S)$.
+In this paper, we use the Weyr canonical form to study the subalgebra $\mathcal{A}(S)$ of $C(S)$ generated by $C(S)_N$. We give a necessary and/or sufficient condition such that $A \in C(S)$ is a sum or product of nilpotent matrices in $C(S)$. We determine conditions on $S$ such that $C(S)_N$ is a subalgebra of $C(S)$, that is, when $\mathcal{A}(S)=C(S)_N$. We also determine conditions on $S$ such that the subalgebra generated by $C(S)_N$ is $C(S)$, that is, when $\mathcal{A}(S)=C(S)$."
+21,Juan Paolo,Santos,MS31: Matrix decompositions and applications,On commutators of unipotent matrices of index $2$,"A commutator of unipotent matrices of index $2$ is a matrix of the form $XYX^{-1}Y^{-1}$, where $X$ and $Y$ are unipotent matrices of index $2$, that is, $X \ne I_n$, $Y \ne I_n$, and $(X-I_n)^2=(Y-I_n)^2=0_n$. If $n>2$ and $\mathbb{F}$ is a field with $|\mathbb{F}| \geq 4$, then it is shown that every $n \times n$ matrix over $\mathbb{F}$ with determinant $1$ is a product of at most four commutators of unipotent matrices of index $2$. Consequently, every $n \times n$ matrix over $\mathbb{F}$ with determinant $1$ is a product of at most eight unipotent matrices of index $2$. Conditions on $\mathbb{F}$ are given that improve the upper bound on the commutator factors from four to three or two. The situation for $n=2$ is also considered. This study reveals a connection between factorability into commutators of unipotent matrices and properties of $\mathbb{F}$ such as its characteristic or its set of perfect squares."
+22,Roksana,Słowik,Contributed talk,Products of infinite upper triangular matrices that satisfy fixed polynomial equation,"There is plenty of results concerning representation elements of an algebraic structure, mainly a group, as products of elements possessing some particular properties. In the matrix groups one of the most famous one is being an involution. The famous theorem states that every square matrix with determinant $\pm 1$ defined over a field is a product of at most four involutions. Simply by their definition, the involutions satisfy equation $x^2-1=0$, i.e. a quadratic equation. Hence, it is natural to raise a question does a similar result hold for matrices that satisfy some other fixed quadratic equation.
+\par
+Consider a field $F$ and an algebra $\mathcal{A}$ defined over $F$. Define polynomial $q$ by the formula $q(x)=a_2x^2+a_1x+a_0$, where $a_2 \neq 0$. If element $a \in \mathcal{A}$ satisfies $q(a)=0$, then we say that $a$ is quadratic with respect to $q(x)$, or shortly that $a$ is $q(x)$-quadratic.
+Recently, Bien et al. \cite{bi_ta_tr_tr} proved that every $\mathbb{N} \times \mathbb{N}$ upper triangular matrix whose diagonal entries are of the form $\lambda_1^{s_i}\lambda_2^{t_i}$, where $s_i+t_i=k$ for every $i \in \mathbb{N}$, $\lambda_1$, $\lambda_2 \neq 0$, can be expressed as a product of at most $k$ quadratic matrices with respect to $q_{\lambda_1,\lambda_2}(x)=(x-\lambda_1)(x-\lambda_2)$.
+This result brings up further questions. Does the same claim holds when $\lambda_1\lambda_2=0$? Does it also hold when we replace the quadratic polynomial by a polynomial of degree $n$ ($\ngeqslant 3$)? During this talk we are going to discuss these issues.
+
+
+\begin{thebibliography}{66}
+\bibitem{bi_ta_tr_tr} M.H. Bien, V.M. Tam, D.C.M. Tri, L.Q. Truong, Products of infinite upper triangular matrices, Linear Algebra Appl. 699 (2024), 59-71.
+\bibitem{tr_sl} L.Q. Truong, R. S{\l}owik, Products of infinite upper triangular matrices that satisfy fixed polynomial equation, in preparation.
+\end{thebibliography}"
+23,Sirshendu,Pan,Contributed talk,Universal winner in trees,"Let $A \in M_n$ be nonnegative, irreducible and $E_{ii}=e_ie_i^t$, where $e_i$ is the $i$-th standard basis vector. For a fixed $t_0>0$, an index $p \in [n]:={1,2,\ldots,n}$ is called a winner for $t_0$ if the spectral radius $\rho(A+t_0E_{pp})=\max\limits_{i\in [n]}\rho(A+t_0E_{ii})$. If $p$ remains a winner for each $t>0$, then it is called a universal winner. The concepts have been introduced in 1996 and studied in only a few articles till now. When $G$ is a simple connected graph (or a strongly connected digraph), the nonnegative weighted adjacency matrix $A(G)$ being irreducible, one can talk of a universal winner vertex with respect to $A(G)$. The universal winners seem to capture the graph structures well. It is known that the only connected digraph $G$ in which all vertices are universal winners with respect to all nonnegative weighted $A(G)$, is the directed cycle, thereby characterizing it. Let $U\subset [n]$ be nonempty. In a recent article, the class of directed connected graphs with vertex set $[n]$, for which only the vertices in $U$ are the universal winners with respect to all nonnegative weighted $A(G)$ was characterized, generalizing the earlier result. Many other combinatorial results exploiting the graph structure were proved establishing the importance of the study of universal winner vertices. In this article, we further the study for the class of undirected graphs, in particular for trees, with respect to only the adjacency matrix. As expected, we supply a class of trees in which no universal winner exists. More interestingly, every tree is a subtree of a tree with a unique universal winner and also a subtree of a tree without a universal winner. Trees with exactly $k>1$ universal winners are not easy to find. A construction of a class of trees with exactly $k$ universal winners is provided. Interestingly, it turns out that for any undirected connected graph $G$, the set of universal winners of $G$ and the corona $G\circ K_1$ are the same, where the later is obtained by adding a new pendent vertex to each vertex of $G$. It is also shown that if $\rho(A(G))>2$, then no vertex of degree one or two can be a universal winner. Previously, it was known that for a path $P$, the central vertices are the universal winners and as a vertex $u$ goes farther from the center, the spectral radius $\rho(A(P)+tE_{uu})$ decreases. We prove that a similar statement also holds for a grid graph."
+24,Madhab,Mondal,Contributed talk,A $q$-analogue of the distance matrix of a tree with matrix weights,"A $q$-analogue of the distance matrix (called the $q$-distance matrix) of a tree was introduced in [Bapat RB, Lal AK, Pati S. A $q$-analogue of the distance matrix of a tree. Linear Algebra Appl. 2006;416(2-3):799--814]. It was formed from the distance matrix $D$ by substituting each entry $d(i,j)$ of $D$ by $1+q+\cdots+q^{d(i,j)-1}$. In this article, we consider the $q$-distance matrix of a weighted tree, where the edge weights are matrices of the same size. We deduce a formula for the determinant of the $q$-distance matrix of a tree. Subsequently, we present a necessary and sufficient condition for the $q$-distance matrix to be invertible and derive an expression for the inverse whenever it exists. The expression for the inverse of the $q$-distance matrix leads us to introduce the $q$-analogue of the Laplacian matrix (named as the $q$-Laplacian matrix) for a tree with matrix weights. A formula for the determinant of the $q$-Laplacian matrix is also provided. Our results extend the existing results for the $q$-distance matrix of a weighted tree when the weights are real numbers, as well as the distance matrix of a tree with matrix weights (that can be obtained by setting $q=1$)."
+25,Debabrota,Mondal,Contributed talk,Smallest positive eigenvalue of non-bipartite unicyclic graphs,"Let $G$ be a simple graph with the adjacency matrix $A(G)$. By the smallest positive eigenvalue of $G$, we mean the smallest positive eigenvalue of $A(G)$, and it is denoted by $\tau(G)$. This spectral parameter has significant applications in both chemical graph theory and spectral graph theory. In the literature, the study of the smallest positive eigenvalue has primarily focused on trees, bipartite unicyclic graphs, and bipartite graphs. In this talk, we discuss bounds on the smallest positive eigenvalue of non-bipartite unicyclic graphs and characterize the extremal graphs. This talk is based on joint work with Sasmita Barik and Subhasish Behera."
+26,Pragati Asutosh,Jena,Contributed talk,Brouwer's conjecture for the corona and edge corona of graphs,"Let $G$ be a connected graph on $n$ vertices. Let $S_k(G)$ denote the sum of $k$ largest Laplacian eigenvalues of $G$ and $e(G)$ denote the number of edges in $G$. Brouwer conjectured that $S_k(G)\leq e(G)+\binom{k+1}{2}$ for any $k\in \{1,\ldots,n\}$. Let $H$ be a connected graph on $m\geq 2$ vertices. Here, we show that if $G$ and $H$ satisfy the Brouwer's conjecture, then the corona of $G$ and $H$ also satisfies the Brouwer's conjecture. Furthermore, when $G$ is regular, $n\geq 4$, $m\geq 3$ and $e(H)\geq m+1$, we prove that if $H$ satisfies the Brouwer's conjecture, then the edge corona of $G$ and $H$ also satisfies the Brouwer's conjecture. This talk is based on joint work with Sasmita Barik."
+27,Iswar,Mahato,Contributed talk,A generalized class of matrices associated to threshold and chain graphs,"Motivated by the distance matrix $D(G)$ of a connected graph $G$, we define a new class of matrix $D_{\alpha,\beta,\gamma, \delta}(G)$ of a connected graph $G$ with diameter at most $3$, by substituting the entries $0,1,2$ and $3$ of $D(G)$ by the real variables $\alpha,\beta, \gamma$ and $\delta$, respectively. Clearly, by putting suitable values of $\alpha,\beta, \gamma$ and $\delta$, we get six interesting known matrices, such as adjacency matrix, Seidel matrix, distance matrix, squared distance matrix, $q$-distance matrix and exponential distance matrix. Therefore, for a graph $G$ with diameter at most $3$, the matrix $D_{\alpha,\beta,\gamma, \delta}(G)$ generalizes these six known matrices. In this article, we consider $D_{\alpha,\beta,\gamma}(G)$ of a threshold graph $G$ and determine an eigenvalue free-interval for $D_{\alpha,\beta,\gamma}(G)$. As a consequence of this result, we recover the known results about the eigenvalue free-interval of the adjacency matrix, the Seidel matrix and the distance matrix of a threshold graph, respectively and obtain an eigenvalue free-interval for the squared distance matrix, the $q$-distance matrix and the exponential distance matrix of a threshold graph, respectively. Moreover, we give an explicit expression for the characteristic polynomial of $D_{\alpha,\beta,\gamma}(G)$. Furthermore, we consider $D_{\alpha,\beta,\gamma, \delta}(G)$ of a chain graph $G$ and find the characteristic polynomial of  $D_{\alpha,\beta,\gamma, \delta}(G)$. As a consequence of these results, we give a determinant formula for the distance matrix, the squared distance matrix, the $q$-distance matrix and the exponential distance matrix of a threshold graph and a chain graph, respectively. "
+28,Damjana,Kokol Bukovšek,Contributed talk,Compressed commuting graphs of matrix rings,"In the talk we introduce compressed commuting graph of rings. It can be seen as a compression of the standard commuting graph (with the central elements added) where we identify the vertices that generate the same subring. The compression is chosen in such a way that it induces a functor from the category of rings to the category of graphs, which means that our graph takes into account not only the commutativity relation in the ring, but also the commutativity relation in all of its homomorphic images. 
+
+We show that this compression is best possible for matrix algebras over finite fields. We consider the compressed commuting graphs of finite fields, rings of $2 \times 2$ matrices over finite fields and rings of $3 \times 3$ matrices over finite prime fields.
+
+(This is a joint work with Ivan-Vanja Boroja, Hamid Reza Dorbidi, and Nik Stopar.)"
+29,Dario Andrea,Bini,Plenary talk,Matrix structures in queueing and network models: An overview,"We provide an overview of some results concerning classes of matrices involved in queueing and network models. We show specific examples where the analysis of matrix structures, besides providing a better understanding of the original problem, is a fundamental step in designing effective ad hoc solution algorithms.
+
+Two specific issues are considered:  the analysis of random walks on a regular grid in the quarter plane, and the assessment of the centrality of the edges in a graph. Both issues derive from the analysis of relevant real-world problems and are modeled by Markov chains describing random walks on a graph. 
+
+In the first topic, the graph is a regular grid, and the specific features of the problem lead to semi-infinite transition probability matrices with a two-level tridiagonal and almost Toeplitz structure. We show that these matrices live in a suitable infinite-dimensional structured matrix algebra which is also a Banach space with respect to the infinity norm. This fact will be crucial to designing effective fast algorithms for computing the steady-state vector of the associated Markov chain.
+
+In the second topic, the graph is typically a road map of a city or region. Thus, the Toeplitz structure of the associated transition probability matrix is lost. However, the sparsity and band structure of this matrix will allow us to easily compute a centrality measure of the edges defined in terms of Kemeny's constant of the associated Markov chain. The effectiveness of the model and the solution algorithms is tested on the road maps of Pisa and Tuscany.
+"
+30,Anjali,Beniwal,Contributed talk,Computation of an exact and approximate GCRD of several polynomial matrices using generalized Sylvester matrices,"The computation of an exact and approximate Greatest Common Right Divisor (GCRD) of polynomial matrices is a fundamental problem in control theory and signal processing. While extensive research has been conducted on the Greatest Common Divisors (GCDs) of scalar polynomials, the study of GCRDs in polynomial matrices remains relatively limited. It is important to develop fast and reliable ways to compute both exact and approximate GCRD, especially when dealing with approximate cases where the data is corrupted by noise.\\
+We address the problem of computing both exact and approximate GCRDs for a given set of univariate polynomial matrices $B_1(s), \dots, B_t(s)$. We establish a key theoretical result—proving that the rank deficiency of a particular generalized Sylvester matrix associated with $P(s)$, where $P(s)$ is obtained by stacking $B_1(s), \dots, B_t(s)$ one below the other, corresponds to the degree of the determinant of their GCRD. This equivalence enables us to develop efficient algorithms for computing an exact GCRD using \textit{Effectively Eliminating QR} (EEQR) decomposition and $SVD$ of that particular generalized Sylvester matrix. $SVD$ can handle noise-corrupted data, making it particularly effective for computing an approximate GCRD. This approach leverages the numerical rank of that particular generalized Sylvester matrix to estimate the degree of an approximate GCRD. Both algorithms are simple to develop, easy to understand, and convenient to implement, ensuring scalability.\\
+We validate our results through various numerical examples, demonstrating their effectiveness. These findings have significant implications for applications requiring polynomial matrix factorizations and simplifications in the presence of noise and uncertainty."
+31,Angelo,Galimba,MS31: Matrix decompositions and applications,Reversibility problem for real quaternion matrices,"In a group $G$, we say that $g \in G$ is \emph{reversible} if there exists $s \in G$ such that $s^{-1}gs = g^{-1}$. Moreover, such $g$ is \emph{strongly reversible} if $s$ is an involution, i.e., $s^2 = e$ where $e$ is the identity of the group $G$. In this talk, we study the reversibility problem in the group of invertible matrices over real quaternions $\mathbb{H}$, $GL(n, \mathbb{H})$. We completely classify up to standard Jordan form all real quaternion matrices in $GL(n,\mathbb{H})$ that are strongly reversible."
+32,Partha,Rana,Contributed talk,Some symmetric sign patterns requiring unique inertia,"A sign pattern is a matrix whose entries are from the set $\{+,-,0\}$. A sign pattern requires unique inertia if every matrix in its qualitative class has the same inertia. For symmetric tree sign patterns, several necessary and sufficient conditions to require unique inertia are known. In this paper, sufficient conditions for symmetric tree sign patterns to require unique inertia based on the sign and position of the loops in the underlying graph are given. Further, some sufficient conditions for a symmetric sign pattern to require unique inertia if the underlying graph contains cycles are determined."
+33,Chi Ho,Yuen,MS25: Enumerative/algebraic combinatorics and matrices,The critical groups of hypercubes and beyond,"The critical group of a graph $G$ is the torsion part of the cokernel of its Laplacian. It refines the number of spanning trees of $G$ in an algebraic way and is related to the chip-firing game (or abelian sandpile model) on $G$. In this talk, we survey several results on the critical groups of the hypercube graphs and their generalizations, including my works on Cayley graphs (joint with J. Gao, J. Marx-Kuo, and V. McDonald) and Adinkras (partly joint with K. Iga, C. Klivans, J. Kostiuk, and with K. Hung), which are decorated graphs introduced by physicists to encode special supersymmetry algebras. The emphasis will be on the novel algebraic techniques employed to prove these results."
+34,Rafik,Bouifden,MS29: Matrix functions and related topics,The expansion of functions by Toeplitz matrices,"The expansion of a real function is a crucial technique for representing a function as an infinite series of simpler functions. This method serves as the primary tool for locally approximating functions that cannot be expressed solely through basic operations—addition, subtraction, multiplication, and division—using polynomials.
+To grasp the significance of this mathematical concept, historical and epistemological research is essential, as noted by Sierpinska $[1]$. The notion of expansion has evolved through several stages, reflecting the development of a broad conceptual framework. R. Kouki $[2]$ categorizes these stages into five non-linear steps, which incorporate various geometric, analytical, and algebraic techniques. The groundwork for this work was laid in the early seventeenth century by mathematicians such as Torricelli, Roberval, Fermat, Descartes, and Isaac Barrow, who addressed tangent problems. This was further articulated by Taylor in 1715 and later expanded upon by Newton and Leibniz through polynomial methods, with significant contributions from Cauchy in 1823 and Abel in 1826, culminating in Poincar\'e's work in 1886.
+Today, calculating the expansion of a function often requires divisions based on increasing powers, where approximate reasoning involves neglecting certain terms in this limiting process. In this context, we propose a novel algorithmic matrix technique that leverages the fundamental properties of matrix computations. Specifically, we associate the expansion of a function $f$ to order $n$ near zero with a Toeplitz triangular matrix, where the first column represents the polynomial corresponding to the expansion of $f$. We then outline all calculation rules for these limited developments. Ultimately, our work gives a quick algorithm to find, according to Douady $[3]$ the object ``the expansion'' of non-usual functions, whose Toeplitz matrices we have chosen as a ``tool'' and vice
+versa in some cases. This approach highlights the importance of matrix techniques in advancing our understanding and application of function expansions.
+\\
+References
+\\
+$[1]$ A.Sierspinka Quelques id\'ees sur la m\'ethodologie de la recherche en didactique des math\'ematiques li\'ees \`a la
+notion d'obstacle \'epist\'emologique, Cahier de Didactique des Math\'ematiques, 7,85-86, (1989).
+\\
+$[2]$ R.Kouki Comparaison entre l'\'evolution historique ayant men\'e aux d\'eveloppements limit\'es et leur pratique
+d'enseignement au d\'ebut de l'universit\'e : Entre syntaxe et s\'emantique, First conference of International Network for Didactic Research in University Mathematics, Montpellier, France, (2016) ffhal-01337899ff
+\\
+$[3]$ R.Douady Jeux de cadres et dialectique outil-objet, Recherches en Didactique des Math\'ematiques, 7(2) 5-31,(1986).  "
+35,Deb,Sarkar,Contributed talk,Results on strong coupled best proximity point with application to non-linear differential equation,"Fixed point theory plays very crucial role in different fields specially in functional analysis. In this paper, some results on strong coupled best proximity point using some new inequalities have been established. A suitable example has also been given supporting the result. In consequences, a result of strong coupled fixed point has been given. Also, an application to non-linear differential equation has been shown. "
+36,Daniel,Kressner,Plenary talk,Adaptive randomized pivoting,"Finding good subsets of row and column indices, often called pivots, is a ubiquitous task in applied and numerical linear algebra. One of its most famous appearances is arguably in Gaussian elimination for solving linear systems, where a good choice of pivots is crucial for numerical stability. This talk will focus on pivoting in the context of low-dimensional approximation, including column subset selection, discrete empirical interpolation, and various interpolative decompositions, such as the CUR and Cholesky/Nystrom approximations. In all of these cases, a greedy choice of pivots usually works well but there are well-known counterexamples where such a choice leads to poor results. We present a new randomized pivot selection strategy that avoids such unfavorable worst-case performance by using adaptivity in two senses: It adapts to information on the range / co-range of a matrix, and the sampling distribution is updated after each pivot selection. Adaptive randomized pivoting enjoys error guarantees that match, in expectation, the best known existence results. At the same time, it is   simpler and usually cheaper than volume-based techniques, which achieve similar guarantees through volume sampling or iterative local volume maximization. We will illustrate several applications of adaptive randomized pivoting and discuss derandomized variants. This talk is based on joint work with Alice Cortinovis, University of Pisa."
+37,Piyush,Verma,Contributed talk,Laplacian spectral properties of token graphs,"Let $G$ be a graph on $n$ vertices. For a given integer $k$ such that $1\leq k \leq n$, the $k$-token graph $F_k(G)$ of $G$ is defined as the graph whose vertices are the $k$-subsets of the vertex set of $G$, and two of them are adjacent whenever their symmetric difference is a pair of adjacent vertices in $G$. Token graphs have applications in coding theory and quantum mechanics. It was conjectured that for any graph $G$, the algebraic connectivity of $F_k(G)$ is equal to the algebraic connectivity of $G$. This result turned out to be a theorem, as it was proved by using the theory of the continuous Markov chain of random walks and interchange process. However, proving this theorem using algebraic and combinatorial methods is still an open and interesting problem. In this talk, we discuss the algebraic connectivity and Laplacian spectral radius of token graphs. Moreover, we study the Laplacian integral token graphs. This talk is based on joint work with Sasmita Barik."
+38,Zsigmond,Tarcsay,Contributed talk,On the UV limit of Wilsonian renormalization group flows of Feynman measures,"In nonperturbative formulation of Euclidean signature quantum field theory, the vacuum state is characterized by the Wilsonian renormalization group  flow of Feynman measures. Such a  flow is a family $(\mu_\eta)_{\eta\in\mathcal S}$ of finite measures on Borel sets  of the space of Schwartz distributions $\mathcal S'$, linked by the Wilsonian renormalization group equation $\mu^{}_{\eta*\zeta}=(C_\eta)^{}_{\#}\mu^{}_\zeta$, for every pair Schwartz functions $\zeta,\eta\in \mathcal S$. Here, $C_\eta\zeta:=\eta*\zeta$ stands for the convolution of  the Schwartz functions $\zeta,\eta\in \mathcal{S}$, while $(C_\eta)_{\#}\mu_\zeta$ denotes the corresponding pushforward measure by $C_\eta$. The goal of this talk is to show the existence of an ultimate Borel measure $\mu$ (called the UV limit of the flow), such that for all $\eta\in\mathcal{S}$ the factorization identity $\mu_{\eta}=(C_{\eta})_{\#}\,\mu$ holds."
+39,Smrati,Pandey,Contributed talk,Spectral properties of the eccentricity matrix of graph products,"Let $G$ be a connected and simple graph. The eccentricity of a vertex $u \in G$, $(e(u))$, is defined as the maximum distance from $u$ to any other vertex $v \in G$ in the graph. The eccentricity matrix, $\epsilon(G)$ is derived from the distance matrix whose $(u, v)$-th entry is equal to $d(u, v)$ if $d(u, v)$ is the minimum of $\{e(u), e(v)\}$, and is zero otherwise. Note that $d(u, v)$ is the distance between the vertices $u$ and $v$. A graph $G$ is said to be self centered if the eccentricity of each vertex of $G$ is same. 
+
+The corona product is a prominent graph operation known for its distinct structural features and has been the focus of extensive research. Over the time, several variations of the corona product have been introduced and analyzed.
+
+Assume that $G$ and $H$ are two finite graphs on $m$ and $n$ vertices, respectively. The corona product $G \circ H$ of two graphs $G$ and $H$, is constructed by keeping a single copy of $G$ and $m$ copies of $H$, and then connecting each vertex of the $j$-th copy of $H$ to the $j$-th vertex of $G$. The one-point-corona, denoted as $G \circ_z H$, is constructed similarly by taking one copy of $H$ for each vertex of $G$, but only the the root vertex $z$ from each copy of $H$ is connected to corresponding vertex in $G$ with an edge.
+
+In this talk, we discuss the irreducibility and spectra of eccentricity matrices obtained from the  corona product and the one point corona product of graphs $G$ and $H$, where $G$ is a self-centered graph."
+40,Jyoti,Rani,"MS33: Norms of matrices, numerical range, applications of functional analysis to matrix theory",On the generalizations of $q$-numerical range and radius,"Let $\mathcal{B(H)}$ be the $C^*$ algebra of all bounded linear operators acting on the Hilbert space $(\mathcal{H}, \langle .,. \rangle )$ equipped with the operator norm. For any $T \in \mathcal{B(H)}$, 
+a generalization of the classical numerical range, namely $q$-numerical range was introduced by Marcus and Andresen in 1977 on $n$- dimensional unitary space. In 1984, the convexity of $q$-numerical range was proved by Nam-Kiu Tsing. The $q$-numerical range of $T \in \mathcal{B}(\mathcal{H})$ is defined by 
+\[
+W_q(T)=\{ \langle Tx,y \rangle: x,y \in H, \|x\|=\|y\|=1, \langle x,y \rangle=q \}.
+\]
+		And the $q$-numerical radius of $T \in B(\mathcal{H})$ is of the form
+\[
+			w_q(T)=\sup_{w \in W_q(T)}|w|.
+\]
+We introduce and examine the concept of the $q$-numerical range, namely, $q$-joint numerical range, for $n$-tuples of bounded linear operators in Hilbert spaces. We derive several inequalities related to the $q$-numerical radius of these operator tuples. Furthermore, we present a generalization of the $q$-numerical range of an operator $T \in \mathcal{B}(\mathcal{H})$ within the context of semi-Hilbertian spaces. Initially, we established the convexity properties of the $q$-numerical range within semi-Hilbertian space, followed by an examination of its relationship with the spectrum in the same context. We have derived several numerical-radius inequalities for the $q$-numerical radius in semi-Hilbertian space, which generalize numerous existing inequalities in the literature. 
+
+Some part of this work has been jointly done with Dr. Arnab Patra, Dr. Kais Feki, Dr. Zakaria Taki."
+41,Souad,Mohaoui,Contributed talk,Tucker decomposition with temporal regularization for motion capture data completion,"Tensor decompositions are powerful frameworks for analyzing high-dimensional data by factorizing multi-way arrays into smaller, interpretable components. In particular, Tucker decomposition has emerged as a tool for modeling multi-dimensional data, helping to uncover underlying patterns, especially in the presence of missing data. In this study, we leverage Tucker decomposition for the completion of motion capture (MoCap) data, which is inherently multi-dimensional and characterized by complex temporal dependencies. MoCap data often suffers from gaps due to missing markers during the recording process, leading to the need for efficient and accurate gap-filling methods. We propose two gap-filling algorithms based on Tucker decomposition: Tucker and TuckerTNN. These methods exploit the low-rank properties of MoCap tensors. To address the computational challenges associated with traditional smoothness regularization, we introduce a temporal nuclear norm regularization in the TuckerTNN model, which provides a more efficient solution for large-scale MoCap datasets. We evaluate the proposed algorithms using the publicly available HDM05 MoCap dataset."
+42,Froilan M.,Dopico,"MS14: Pencils, polynomial, and rational matrices",Polynomial and rational matrices with the invariant rational functions and the four sequences of minimal indices prescribed,"The complete eigenstructure, or structural data, of a rational matrix
+$R(s)$ is comprised by its invariant rational functions, both finite
+and at infinity, which determine its finite and infinite pole and zero
+structures, and by the minimal indices of its left and right null spaces.
+These quantities arise in many applications and have been thoroughly
+studied in numerous references. However, $R(s)$ has other two fundamental
+subspaces which, in contrast, have received much less attention
+in the literature. They are its column and row spaces, which also have
+their associated minimal indices. This work solves the problems of
+finding necessary and sufficient conditions for the existence of rational
+matrices in two scenarios: (a) when the invariant rational functions and the minimal indices of the column and row spaces are prescribed,
+and (b) when the complete eigenstructure together with the minimal
+indices of the column and row spaces are prescribed. The particular,
+but extremely important, cases of these problems for polynomial matrices
+are solved first and are the main tool for solving the general
+problems. The results in this work complete and extend non-trivially
+the necessary and sufficient conditions recently developed in the literature
+for the existence of polynomial and rational matrices when only
+the complete eigenstructure is prescribed.
+
+This is joint work with Itziar Baraga\~na and Silvia Marcaida (Universidad del Pa\'is Vasco UPV/EHU, Spain) and Alicia Roca (Universitat Polit\`ecnica de Val\`encia, Spain)."
+43,Brooke,Randell,"MS33: Norms of matrices, numerical range, applications of functional analysis to matrix theory",Exploring the numerical range of block Toeplitz operators,"We will discuss the numerical range of a family of Toeplitz operators with symbol function \(\phi(z)=A_0+zA_1\), where \(A_0\) and \(A_1\) are \(2 \times 2\) matrices with complex-valued entries. A special case of a result proved by Bebiano and Spitkovsky in 2011 states that the closure of the numerical range of the Toeplitz operator \(T_{\phi(z)}\) is the convex hull of \(\{W(\phi(z)): z \in \partial \mathbb{D}\}\). Here, \(W(\phi(z))\) denotes the numerical range of \(\phi(z)\). We combine this result with the envelope algorithm to describe the boundary of the convex hull of \(\{W(\phi(z)): z \in \partial \mathbb{D}\}\). We also place specific conditions on the matrices \(A_0\) and \(A_1\) so that \(\{W(\phi(z)): z \in \partial \mathbb{D}\}\) is a set of potentially degenerate circular disks. The convex hull of \(\{W(\phi(z)): z \in \partial \mathbb{D}\}\) takes on a wide variety of shapes, including the convex hull of lima\c{c}ons."
+44,Anmary,Tonny,MS7: Linear algebra and quantum information science,Results on the symplectic spectrum of some special classes of operators,"Williamson's Normal form for $2n\times 2n$ real positive matrices is a symplectic analogue of the spectral theorem for normal matrices. With the recent developments in quantum information theory,  Williamson's normal form has opened up an active research area that may be dubbed as ``finite dimensional symplectic spectral theory'', analogous to the usual spectral theory and matrix analysis. An infinite dimensional analogue of the Williamson's Normal form has appeared recently and has already become a corner stone for the theory of infinite mode quantum Gaussian states. However, most existing results pertain to finite-dimensional operators, leaving a dearth of literature in the infinite-dimensional context. The aim of this talk is to discuss some recent results in this direction. Specifically, we discuss the recently proved inequality between the eigenvalues and symplectic eigenvalues for positive invertible operators $T$ on $\mathcal{H} \oplus \mathcal{H}$ (where $\mathcal{H}$ is a real separable Hilbert space) such that $T- \alpha I$ is compact for some $\alpha > 0$ and see its applications on the Gaussian covariance operators and positive Absolutely Norm attaining operators ($(\mathcal{AN})_+$ operators). We also show that the symplectic spectrum lies within the bounds of the spectrum for operators on specific classes. Additionally, we provide a method to recover the symplectic spectrum of Gaussian covariance operators through truncation."
+45,Ning,Zheng,Contributed talk,Randominzed inner iteration preconditioning ,"Many scientific computing problems have associated condition numbers that reflect the sensitivity and difficulty of solving the problem numerically. 
+The preconditioning technique replaces a badly conditioned problem with an equivalent problem with a smaller condition number. 
+We propose using randomized iteration algorithms as implicit preconditioners for the Krylov subspace methods to solve linear systems and linear least squares problem. 
+Theoretical justifications of the preconditioned GMRES are presented. 
+Numerical experiments on overdetermined and underdetermined linear systems show that the proposed method is superior to the other classical preconditioners in terms of total CPU time.
+%Linear algebra is a fundamental branch of mathematics that underpins numerous scientific and technological advancements. It provides essential tools for solving systems of equations, transforming geometric spaces, and analyzing data. With applications in engineering, computer science, physics, economics, and machine learning, linear algebra plays a crucial role in modern innovations, from image processing to artificial intelligence. "
+46,Anusree,Sreedharan,MS1: Embracing new opportunities in numerical linear algebra,Hyperbolic wavelets and multiresolution in $A_{\alpha}^{2} (\mathbb{D})$,"We examine rational Blaschke functions that are capable to formulate a Multiresolution on the weighted Bergman space of the open unit disc $A_{\alpha}^{2} (\mathbb{D})$. We construct a rational orthogonal wavelet system that generates the levels of the multiresolution. The levels of the multiresolution are finite dimensional, which makes it easier to find a basis on each level. We can approximate any $f \in A_{\alpha}^{2} (\mathbb{D})$ by the projection operator on the $n^{\mbox{th}}$ resolution level. The projection will be an interpolation operator and whose coefficients can be computed through the evaluation of $f$ on a given set of points in the unit disc. We extend the results to weighted Bergman space of upper half plane and we introduce a numerical method to compute the coefficients when the values of $f$ are given on a set of points in the upper half-plane. "
+47,Manisha,Devi,Contributed talk,On the eigenvalues of the matrix $[f(g(p_i-p_j))]$,"We prove that if $g:\mathcal{R}\rightarrow[0,\infty)$ is a conditionally negative definite function and $f:[0,\infty)\rightarrow[0,\infty)$ is a Bernstein function, then the function $f\circ g$ is conditionally negative definite. The inertia of the matrix $[f(g(p_i-p_j))]$ is $(1,0,n-1)$ if $g(x)=0$ only for $x=0$ and $f$ is non-linear. A new and easy proof is also presented to demonstrate that the matrix $[\log(1-p_ip_j)]$ is negative definite for $n$ distinct positive real numbers $p_i<1, ~\forall~i$. Numerous more relevant results are discussed. These results supplements and unifies previous findings for operator monotone functions demonstrated by several authors, including Dyn, Goodman and Michelli, Bhatia and Jain, Garg and Aujla, and Garg and Agarwal."
+48,Anmary,Tonny,Contributed talk,Results on the symplectic spectrum of some special classes of operators,"Williamson's Normal form for $2n\times 2n$ real positive matrices is a symplectic analogue of the spectral theorem for normal matrices. With the recent developments in quantum information theory,  Williamson's normal form has opened up an active research area that may be dubbed as ``finite dimensional symplectic spectral theory'', analogous to the usual spectral theory and matrix analysis. An infinite dimensional analogue of the Williamson's Normal form has appeared recently and has already become a corner stone for the theory of infinite mode quantum Gaussian states. However, most existing results pertain to finite-dimensional operators, leaving a dearth of literature in the infinite-dimensional context. The aim of this talk is to discuss some recent results in this direction. Specifically, we discuss the recently proved inequality between the eigenvalues and symplectic eigenvalues for positive invertible operators $T$ on $\mathcal{H} \oplus \mathcal{H}$ (where $\mathcal{H}$ is a real separable Hilbert space) such that $T- \alpha I$ is compact for some $\alpha > 0$ and see its applications on the Gaussian covariance operators and positive Absolutely Norm attaining operators ($(\mathcal{AN})_+$ operators). We also show that the symplectic spectrum lies within the bounds of the spectrum for operators on specific classes. Additionally, we provide a method to recover the symplectic spectrum of Gaussian covariance operators through truncation."
+49,Athul,Augustine,Contributed talk,Composition operators and convexity of their Berezin range on functional Hilbert spaces,"We discuss the convexity of the range of the Berezin transform. Berezin range of a bounded linear operator $T$ acting on a reproducing kernel Hilbert space $\mathcal{H}$ is the set $B(T)$ := $\{\langle T\hat{k}_{x},\hat{k}_{x} \rangle_{\mathcal{H}} : x \in X\}$, where $\hat{k}_{x}$ is the normalized reproducing kernel for $\mathcal{H}$ at $x \in X$. The \textit{numerical range} of a bounded linear operator $T$ on a Hilbert space $\mathcal{H}$ is defined as $W(A):= \{\langle Tu,u\rangle : \|u\| = 1 \}.$ By Toeplitz-Hausdorff theorem, the numerical range of a linear operator on a Hilbert space is always convex.  It is easy to observe that the Berezin range of an operator $T$ is always a subset of the numerical range of $T$. In general, the Berezin range of an operator is not convex. Primarily, we focus on characterizing 
+convexity of the Berezin range for classes of composition operators acting on some functional Hilbert spaces.
+"
+50,Jonas,Bresch,MS4: Linear algebra methods for inverse problems and data assimilation,"Matrix-free stochastic calculation of operator norms without using adjoint---on the way to compute the adjoint mismatch
+","Linear inverse problems are of great interest in the last years.
+In this talk, we investigate linear inverse problems where the adjoint of the forward operator is not know exactly.
+Therefore, we focus on the problem of computing the norm of an operator (between finite dimensional Hilbert spaces),
+more precisely $\|A\|$ respectively $\|A - V\|$,
+where only evaluations of the linear map $x \mapsto A x$, 
+respectively and $y \mapsto V^*y$ are available 
+with restrictive storage assumptions for the proposed algorithm.
+We propose stochastic methods of random search type for the maximization of the Rayleigh quotient
+respectively Rayleigh-like quotient
+and employ exact line search in the random search directions.
+Moreover, 
+we can show that the proposed algorithms converge to the global maximum 
+(the operator norm) almost surely 
+and illustrate the performance of the method with numerical experiments.
+Furthermore, 
+for the latter problem we can prove a convergence rate.
+"
+51,Anzila,Laikhuram,MS17: Graphs and matrices in honor of Leslie Hogben's retirement,"Inverse eigenvalue problem for discrete Schrödinger operators of a graph
+","The Inverse Eigenvalue Problem of a Graph (IEPG) determines whether a set of real numbers can be realized as the spectrum of a real symmetric matrix in $\mathcal{S}(G)$, where $\mathcal{S}(G)$ consists of symmetric matrices associated with a graph $G$, having non-zero off-diagonal entries only for adjacent vertices. Extending this, the Inverse Eigenvalue Problem for discrete Schr\""odinger operators investigates if a given set of real numbers can be the spectrum of a matrix in $\ddot{\mathcal{S}}(G)$, where off-diagonal entries are negative for edges and zero otherwise, with unrestricted diagonal entries. We begin with connected graphs on 4 vertices. For a list of real numbers $\lambda_1 < \lambda_2 \leq \lambda_3 \leq \lambda_4$, we determine if there exists a matrix in $\ddot{\mathcal{S}}(G)$ with spectrum $\{\lambda_1, \lambda_2, \lambda_3, \lambda_4\}$ and the smallest eigenvalue simple. We identify feasible ordered multiplicity lists, noting that not all are valid.   Our investigation extends to families of graphs such as paths ($P_n$), and complete graphs ($K_n$). For $P_n$, any set of $n$ distinct real numbers is realizable as a spectrum in $\ddot{\mathcal{S}}(P_n)$. For $K_n$, any ordered list $\lambda_1 < \lambda_2 \leq \dots \leq \lambda_n$ is achievable. "
+52,Bibekananda,Sitha,Contributed talk,Dual core-EP generalized inverse and decomposition,"In this work, we introduce a new type of generalized inverse called dual core-EP generalized inverse (in short DCEPGI) for dual square matrices. We analyze the existence and uniqueness of the DCEPGI inverse and its compact formula using dual Drazin and dual MP inverses. Moreover, some characterizations using core-EP  decomposition are obtained. We present a new dual matrix decomposition named the dual core-EP decomposition for square dual matrices. In addition, some relationships with other dual generalized inverses are established. Solutions to some inconsistent system of linear dual equations are derived. 
+"
+53,Thaniporn,Chaysri,Contributed talk,"(Generic) Eigenvalue algorithms for matrices of quaternions, reduced biquaternions and their dual, and applications","Quaternions are a four-dimensional non-commutative algebra and a division ring of numbers introduced by Hamilton in 1843. The main obstacle in deriving eigenvalue algorithms for matrices of quaternions, due to non-cummutativity, is the efficient implementation of shifts. Other linear algebra concepts naturally carry over from real or complex numbers. 
+Reduced biquaternions are a four-dimensional commutative number algebra, introduced by Segre in 1892. The main obstacles when deriving algorithms for matrices of reduced biquaternions are the existence of non-invertible non-zero elements, and the need to consistently define some basic linear algebra concepts in this setting. 
+We present new efficient algorithms for the QR factorization and eigenvalue and singular value decompositions of these types of matrices and their dual, keeping them as generic as possible. 
+We also present applications to computation of various types of matrix generalized inverses and image analysis. The algorithms are efficiently implemented using the multiple-dispatch feature of the programming language Julia. 
+This is joint work with Ivan Slapni{\v c}ar, Nevena Jakov{\v c}evi{\' c} Stor, and Anita Carevi{\' c} from the Department of Mathematics and Physics, FESB, University of Split, Croatia, and Sk. Safique Ahmad, Neha Bhadala, Pinki Khatun, and Gyan Swarup Nag from the Department of Mathematics, IIT Indore, India.
+This work has been partially supported by Croatian Science Foundation under the project IP-2020-02-2240.
+"
+54,Hojin,Chu,Contributed talk,"Structural properties of symmetric Toeplitz and Hankel matrices
+","In this paper, we investigate properties of a symmetric Toeplitz matrix and a Hankel matrix by studying the components of its graph.
+To this end, we introduce the notion of ``weighted Toeplitz graph'' and ``weighted Hankel graph'', which are weighted graphs whose adjacency matrix are a symmetric Toeplitz matrix and a Hankel matrix, respectively.
+By studying the components of a weighted Toeplitz graph, we show that the Frobenius normal form of a symmetric Toeplitz matrix is a direct sum of symmetric irreducible Toeplitz matrices.
+Similarly, by studying the components of a weighted Hankel matrix, we show that the Frobenius normal form of a Hankel matrix is a direct sum of irreducible Hankel matrices. "
+55,Tejbir,Lohan,Contributed talk,"Product of two involutions in special linear groups
+","An element of a group is called an involution if its square equals the identity element. Decomposing a group element into a product of involutions has applications in various areas of mathematics, with a particular focus on elements that can be expressed as the product of two involutions, known as \textit{strongly reversible}, \textit{strongly real}, or \textit{bireflectional} elements. Classifying strongly reversible elements in a group is a problem of broad interest. It is known that an element of the general linear group over a field is strongly reversible if and only if it is similar to its inverse. However, this result does not hold for special linear groups over a field or a division ring. In this talk, we will use the notion of reversibility to classify the strongly reversible elements in the complex special linear group and the quaternionic special linear group. This talk is based on joint work with Krishnendu Gongopadhyay and Chandan Maity.
+"
+56,Hojin,Chu,Contributed talk,"Structural properties of symmetric Toeplitz and Hankel matrices
+","In this paper, we investigate properties of a symmetric Toeplitz matrix and a Hankel matrix by studying the components of its graph.
+To this end, we introduce the notion of ``weighted Toeplitz graph'' and ``weighted Hankel graph'', which are weighted graphs whose adjacency matrix are a symmetric Toeplitz matrix and a Hankel matrix, respectively.
+By studying the components of a weighted Toeplitz graph, we show that the Frobenius normal form of a symmetric Toeplitz matrix is a direct sum of symmetric irreducible Toeplitz matrices.
+Similarly, by studying the components of a weighted Hankel matrix, we show that the Frobenius normal form of a Hankel matrix is a direct sum of irreducible Hankel matrices."
+57,Sunyo,Moon,Contributed talk,"Edge completion of signed graphs with spectral integral variation
+","Spectral variation of two matrices is integral if their spectra differ by integer quantities. For two signed graphs, where one is obtained from the other by adding a new edge, we characterize when the spectral variation of their signed Laplacian matrices becomes integral. Furthermore, for every fixed signed complete graph, we fully characterize the class of signed graphs to which one can recursively add new edges keeping spectral integral variation to make the signed complete graph.This generalizes Kirkland's characterization for integrally completable graphs (Discrete Math., 2005). This is joint work with Jungho Ahn and Cheolwon Heo.
+"
+58,Sirani,M. Perera,"MS26: Utilizing structure to achieve low-complexity algorithms for data science, engineering, and physics","A low-complexity structured neural network approach for dynamical systems
+","Data-driven learning is advancing rapidly, offering a new perspective on understanding dynamic systems. On the other hand, traditional methods for solving chaotic and highly non-linear systems face challenges in computational efficiency due to their inherent complexity and dynamics. Fortunately, neural networks excel in solving highly non-linear systems, showing exceptional performance.  
+\\\\
+In this talk, we propose a neural network approach to update the states of dynamical systems through a structured operator known as a Hankel operator -- an operator characterized by a Hankel structure. Our goal is to develop an optimal, low-complexity learning algorithm that utilizes time-delay measurements to forecast future states effectively. By the conclusion of the talk, we will demonstrate how this operator can be employed to model state-space dynamical systems, enabling predictions and insights into future dynamics compared to conventional techniques: SINDy and HAVOK followed by the feedforward neural networks.
+\\\\
+This is a joint work with Hansaka Aluvihare, Levi Lingsch, and Xianqi Li. This work was funded by the Division of Mathematical Sciences at the National Science Foundation with the award numbers 2410676, 2410677, \& 2410678.
+"
+59,Amrita,Mandal,Contributed talk,"On order 5 trace zero doubly stochastic matrices and the corresponding eigenvalue region
+ "," A non-negative square matrix is called a doubly stochastic (DS) matrix if all its row and column sums are exactly equal to $1.$ A vast literature is known for such matrices concerning the eigenvalue region, inverse eigenvalue problem or entry-wise distribution of the non-negative numbers when matrix size or order of the matrix is restricted up to $4,$
+ whereas only a little is known for matrices of order $5$ or more except for some sets of doubly structured matrices. 
+ %A DS matrix always can be represented as the convex combination of permutation matrices of concerned size.
+ 
+ This talk concerns the following questions: What are those trace zero order $5$ DS matrices whose $k$-times multiplications are also trace zero matrices for some values of $k?$ What is the eigenvalue region of the set of trace zero order $5$ DS matrices? 
+ 
+ We address these questions by proposing a graph theoretic approach to determine the trace of the product of two permutation matrices through a weighted digraph representation for a pair of permutation matrices. Then, we derive the DS matrices of order $5$ whose $k$-th power is also a trace-zero DS matrix for $k\in\{2,3,4,5\}$. Then, we determine necessary conditions for the coefficients of a generic polynomial of degree $5$ to be realizable as the characteristic polynomial of a trace-zero DS matrix of order $5$. Using this, we approximate the eigenvalue region of trace-zero DS matrices of order $5.$ 
+ 
+ 
+ "
+60,Sing-Yuan,Yeh,MS20: Manifold learning and statistical applications,"Landmark diffusion accelerates alternating diffusion maps for multi-sensor fusion
+","Alternating Diffusion (AD) is a commonly applied diffusion-based sensor fusion algorithm. While it has been successfully applied to various problems, its computational burden remains limited. Inspired by the landmark diffusion idea considered in the Robust and Scalable Embedding via Landmark Diffusion (ROSELAND), we propose a variation of AD, called Landmark AD (LAD), which captures the essence of AD while offering superior computational efficiency. Through a series of theoretical analyses, we investigate the sample complexity of LAD within the manifold setup. We then apply LAD to address the automatic sleep stage annotation problem using two electroencephalogram channels, demonstrating its efficacy in practical applications.
+"
+61,Luca,Gemignani,"MS26: Utilizing structure to achieve low-complexity algorithms for data science, engineering, and physics",On the numerical solution of  nonLocal boundary value problems by matrix function computations,"Given a matrix $A\in \mathbb R^{s\times s}$ and a  vector $\mathbf {f} \in \mathbb{ R } ^s,$ under mild assumptions the non-local boundary value problem 
+\begin{eqnarray*}
+    &&\odv{\mathbf{u}}{\tau} = A \mathbf{u}, \quad 0<\tau<1,   \label{l1} \\
+  &&\displaystyle \int_0^1 \mathbf{u}(\tau) \,\mathrm{d}\tau = \mathbf {f}, \label{l2}
+\end{eqnarray*}
+admits as unique solution
+\[
+ \mathbf{u}(\tau)= q(\tau,A) \mathbf {f}, \quad q(\tau,w)= \frac{w e^{w\tau}}{e^w -1}.
+ \]
+This talk  deals with efficient numerical methods for computing the action
+of $q(\tau,A)$ on a vector,  when $A$ is a large and
+  sparse matrix.  Methods based on the Fourier expansion of $q(\tau,w)$
+are considered. First, we place
+these methods in the classical framework of Krylov-Lanczos
+(polynomial-rational) techniques for accelerating Fourier series.
+This allows us to apply the convergence results developed in this
+context to our function. Second, we design some  new acceleration schemes for computing $q(\tau,A) \mathbf {f}$. Numerical results are presented to show the effectiveness of
+the proposed algorithms.
+
+
+\emph{This is joint work with Lidia Aceto.}"
+62,Shakir Showkat,Sofi,MS8: Tensor and quantum information science,Tensor train completion of multiway data observed in a single mode,"Tensor completion is an extension of matrix completion aimed at recovering a partially observed data tensor by leveraging the observations and the pattern of observation. Completion is more important for tensors than for matrices for several reasons. Higher-order datasets are larger, increasing the likelihood of missing or unreliable entries. Large-scale data often exhibits low-rank properties (intuitively, not every entry is ``equally important,'' unlike in smaller matrices). Many interesting problems can be framed as instances of low-rank tensor completion, including image and video recovery, collaborative filtering, and quantum state tomography \cite{liu2013tc, gross2010quantum}. Low-rank tensor completion is generally solved via convex optimization techniques. Current theories concerning these methods often study probabilistic recovery guarantees under conditions such as random uniform observations and incoherence requirements \cite{candes2009exact, liu2013tc}. However, if an observation pattern has some structure, more efficient algorithms can be developed by leveraging the structure.\par
+
+Algebraic methods exploit the low-rank structure to design algorithms that rely solely on standard numerical linear algebra (NLA) operations. They are fast and are guaranteed to work under reasonable deterministic conditions on the observation pattern. In this line, a specific type of ``fiber-wise'' observation pattern has been discussed, where some of the fibers of a tensor (along a specific mode) are either fully observed or entirely missing, unlike the usual entry-wise observations. This observation is interesting because it appears in many real-life applications and highlights a key difference between matrices and tensors. While missing fibers (rows or columns) in a matrix make completion underdetermined, higher-order tensors can still be completed even if some fibers are entirely missing along one mode. It has been shown that under reasonable conditions, canonical polyadic decomposition (CPD) and multilinear singular value decomposition (MLSVD) of such an incomplete tensor can still be obtained using only standard NLA \cite{mikael2019fibersamp, stijn2023mlsvdfsj}. Note that there is an important difference with the technique of cross or skeleton approximation in the sense that we assume the availability of fibers in one mode only. \par
+
+With the increasing prevalence of big data, the demand for reliable and scalable algorithms has become more pressing. The tensor train (TT) decomposition is stable and can break the curse of dimensionality \cite{oseledets2010tensortrain}. This talk shows how to extend the fiber-wise completion to the TT format. We discuss the deterministic conditions under which the uniqueness of the solution is guaranteed \cite{stijn2023mlsvdfsj, shakir2024ttfw}. Furthermore, we discuss a few interesting applications and briefly highlight the possibility of utilizing this tensor completion framework as a fundamental experimental primitive for efficient quantum state tomography with fewer measurements.
+
+\begin{thebibliography}{7}
+\bibitem{liu2013tc} J. Liu, P. Musialski, P. Wonka, and J. Ye. Tensor Completion for Estimating Missing Values in Visual Data. \textit{IEEE Trans. Pattern Anal. Mach. Intell.}, 35:208--220, 2013.
+
+\bibitem{gross2010quantum} D. Gross, Y. K. Liu, S. T. Flammia, S. Becker, and J. Eisert. Quantum State Tomography via Compressed Sensing. \textit{Phys. Rev. Lett.}, 105(15):150401, 2010. APS.
+
+\bibitem{candes2009exact} E. J. Cand{\`e}s and B. Recht. Exact Matrix Completion via Convex Optimization. \textit{Found. Comput. Math.}, 9(6):717--772, 2009. Springer.
+
+
+\bibitem{mikael2019fibersamp} M. S{\o}rensen and L. De Lathauwer. Fiber Sampling Approach to Canonical Polyadic Decomposition and Application to Tensor Completion. \textit{SIAM J. Matrix Anal. Appl.}, 40:888--917, 2019.
+
+\bibitem{stijn2023mlsvdfsj} M. S{\o}rensen, S. Hendrikx, and L. De Lathauwer. Multilinear Singular Value Decomposition Based Completion with Fibers Observed in a Single Mode. \textit{SIAM J. Matrix Anal. Appl.}, 2025. [Accepted for publication], \url{https://ftp.esat.kuleuven.be/pub/stadius//shendrik/hendrikx2023mlsvdfibersimax.pdf}.
+
+\bibitem{oseledets2010tensortrain} I. Oseledets. Tensor-Train Decomposition. \textit{SIAM J. Sci. Comput.}, 33:2295--2317, 2011.
+
+\bibitem{shakir2024ttfw} S. S. Shakir, S. Hendrikx, and L. De Lathauwer. Tensor Train Completion of Multi-Way Data Observed Along One Mode. In \textit{Proc. 32nd EUSIPCO}, pages 1067--1071, 2024. IEEE.
+\end{thebibliography}"
+63,Leonardo,Robol,MS18: New methods in numerical multilinear algebra,A multilinear Nyström algorithm for low-rank approximation of tensors in Tucker format,"The Nystr\""om method offers an effective way to obtain low-rank approximation of SPD matrices and has been recently extended and analyzed to nonsymmetric matrices (leading to the generalized Nystr\""om method). It is a randomized, single-pass, streamable, cost-effective, and accurate alternative to the randomized SVD, and it facilitates the computation of several matrix low-rank factorizations. We take these advancements a step further by introducing a higher-order variant of Nystrom’s methodology tailored to approximating low-rank tensors in the Tucker format: the multilinear Nystr\""om technique. We show that, by introducing appropriate small modifications in the formulation of the higher-order method, strong stability properties can be obtained. This algorithm retains the key attributes of the generalized Nystr\""om method, positioning it as a viable substitute for the randomized higher-order SVD algorithm."
+64,Miguel,Rojas Rodríguez,Contributed talk,Matrix analysis of orthogonal polynomials and uvarov perturbations,"In this talk, we emphasize the decisive role of matrix analysis in studying orthogonal polynomials. The theory of classical orthogonal polynomials and matrix analysis naturally arises in the study of tridiagonal matrices (Jacobi matrices), whose spectrum, under certain conditions, coincides with the support of a measure associated with a sequence of orthogonal polynomials. Furthermore, the GaussâBorel factorization of the moment matrix plays a fundamental role in characterizing orthogonality and uncovering key structural properties. \\
+We focus on MMOP, which are orthogonal polynomials with respect to a matrix of measures. In this case, the associated Jacobi matrix is a banded matrix, where the number of nonzero diagonals depends on the size of the measure. Within this framework, we study how orthogonal polynomials transform when the matrix of measures undergoes matrix polynomial perturbations. The most general perturbation we consider follows Uvarovâs form:   \\
+    $ \mathrm{d}\tilde{\mu}(x) R(x) = L(x) \mathrm{d} \mu(x),$\\
+where $R(x),\,L(x)$ are polynomial matrices, $\mathrm{d} \mu (x)$ is the original measure matrix, and $\mathrm{d} \tilde{\mu}(x)$ is the perturbed measure matrix. By taking $R(x) = I$ or $L(x) = I$, we obtain a Christoffel or Geronimus perturbation, respectively.   \\
+The main contribution of our work is the generalization of these perturbations beyond diagonal matrix polynomials, extending the theory to include cases with non-monic leading matrices. This generalization leads to an analysis of the spectral properties of the perturbation matrix polynomials. Furthermore, we reduce the problem of ensuring orthogonalityâframed as a question of the quasi-definiteness of a matrix measureâto a linear algebra problem involving the compatibility of certain systems of linear equations."
+65,JunJun,Pan,Contributed talk,The importance of linear algebra,"Linear algebra is a fundamental branch of mathematics that underpins numerous scientific and technological advancements. It provides essential tools for solving systems of equations, transforming geometric spaces, and analyzing data. With applications in engineering, computer science, physics, economics, and machine learning, linear algebra plays a crucial role in modern innovations, from image processing to artificial intelligence. 
+"
+66,Sachindranath,Jayaraman,Contributed talk,"Quaternion matrix polynomials: location of eigenvalues
+","A right quaternion matrix polynomial is an expression of the form 
+$P(\lambda) = \displaystyle \sum_{i=0}^{m}A_i \lambda^i$, where 
+$A_i \in M_n(\mathbb{H})$ with $A_m \neq 0$, where 
+$M_n(\mathbb{H})$ is the set of all square matrices from the ring of quaternions. 
+A quaternion $\lambda_0 \in \mathbb{H}$ is a right eigenvalue of $P(\lambda)$ 
+if there exists a nonzero vector $y \in \mathbb{H}^n$ such that 
+$\displaystyle \sum_{i=0}^{m}A_i  y\lambda_0^i  =0$. The purpose of this talk is to 
+bring out some recent results about the location of right eigenvalues of $P(\lambda)$ 
+relative to certain subsets of the set of quaternions. The notion of (hyper)stability of 
+complex matrix polynomials is extended to quaternion matrix polynomials and 
+results are obtained about right eigenvalues of $P(\lambda)$ by  
+$(1)$ giving a relation between (hyper)stability of a quaternion matrix polynomial and 
+its complex adjoint matrix polynomial, and then by $(2)$ proving that $P(\lambda)$ is 
+stable with respect to an open (closed) ball in the set of quaternions, centered at a complex 
+number if and only if it is stable with respect to its intersection with the set of 
+complex numbers.  We derive as a consequence of the above that right 
+eigenvalues of $P(\lambda)$ lie between two concentric balls of specific radii in the 
+set of quaternions centered at the origin. A generalization of the 
+Enestr{\""o}m-Kakeya theorem to quaternion matrix polynomials is obtained as an 
+application. Finally, we also identify classes of quaternion matrix polynomials for 
+which stability and hyperstability are equivalent.  This talk is based on the following paper.
+
+\begin{itemize}
+\item Pallavi Basavaraju, Shrinath Hadimani and Sachindranath Jayaraman, 
+\textit{Stability of quaternion matrix polynomials}, appecped for publication, 
+\textit{Linear Algebra, Matrices and their Applications}, Contemporary Mathematics, 
+AMS, Edited by Surender Kumar Jain, Manjunatha Prasad Karantha, Steve Kirkland, 
+Vinay Madhusudanan, Srinivasa Siva Rama Krishna Rao Taduri.
+\end{itemize}
+
+"
+67,Hitesh,Kumar,Contributed talk,"New results on second eigenvalue extremization
+"," For an $n$-vertex graph $G$ with adjacency matrix $A(G)$, let $\lambda_1$ and $\lambda_2$ denote the first and the second largest eigenvalue of $A(G)$. The extremization problem for $\lambda_1$ has been extensively investigated in the literature. The second eigenvalue has been investigated primarily for regular graphs, and there are relatively fewer results on $\lambda_2$-extremization. In this talk, the speaker will discuss several new results on $\lambda_2$-extremization, which include:
+\begin{enumerate}
+ \item determining extremal trees of given order and diameter having maximum/minimum $\lambda_2$.
+ \item determining complements of trees with given order and maximum/minimum $\lambda_2$.
+ \item determining extremal trees of given order for the convex combination of $\lambda_1$ and $\lambda_2$, and the asymptotic behaviour of the convex combination. 
+\end{enumerate}
+The results are based on joint work with several people: Saieed Akbari, Bojan Mohar,  Shivaramakrishna Pragada, and Hanmeng Zhan.
+"
+68,Zoran,Tomljanovic,MS6: Model Reduction,Efficient solution of sequences of parametrized Lyapunov equations with applications,"The solutions of parametrized Lyapunov equations frequently serve as intermediate steps in a broader procedure aimed at computing $trace(EX)$, where $X$ represents the solution to the Lyapunov equation and $E$ is a given matrix. Our focus is on studying problems where the parameter dependence of the coefficient matrix is encoded as a low-rank modification of a fixed, seed matrix.\\
+We propose two novel numerical procedures that fully exploit such a common structure. The first one builds upon the Sherman-Morrison-Woodbury   formula and recycling Krylov techniques, and it is well-suited for small dimensional problems as it uses dense numerical linear algebra tools. The second algorithm can instead address large-scale problems by relying on state-of-the-art projection techniques based on the extended Krylov subspace. We test the new algorithms on several problems arising in studying damped vibrational systems and analyzing output synchronization problems for multi-agent systems. Our results show that the proposed algorithms are superior to state-of-the-art techniques as they can remarkably speed up the computation of accurate solutions.\\
+This is joint work with Davide Palitta, Ivica Naki\'{c} and Jens Saak."
+69,Li-Gang,Lin,MS1: Embracing new opportunities in numerical linear algebra,Fast SDDRE-based maneuvering-target interception at prespecified orientation,"This talk considers the 3-D guidance law based on target lead angle information and the state-dependent differential Riccati equation (SDDRE) scheme. In an application-oriented manner, it presents theories to significantly improve critical computational performance and thus aims at a fast implementation for impact-angle-constrained interception of agile maneuvering targets. More specifically, regarding the two major computational burdens using SDDRE, we have replaced the burden in numerical applicability checking by a simple, equivalent, and closed-form condition for the entire state space, which is actually the dominant burden as supported by complexity analysis and extensive validations. Notably, the proposed analysis not only complements the early findings of applicability guarantee in literature, but also promotes the efficiency of the proposed philosophy when compared to the classic method, where the latter has caused concerns/reservations due to its feasibility and difficulty. On the other hand, we have largely mitigated the second major burden of SDDRE by -- after exhaustive trials -- selecting the most efficient Riccati-equation solver until the latest benchmarks. Such evaluations are: 1) in favor of a much-less-known achievement, rather than the common QR-based benchmark and 2) subject to both numerical and hardware experiments including, notably, implementations on microcontrollers and field-programmable gate arrays.
+"
+70,Kristian,Sabo,Contributed talk,A method for searching for a globally optimal k-partition of higher-dimensional datasets,"Finding a globally optimal \( k \)-partition of a set is a highly complex optimization problem. In general, except for the special case of one-dimensional data (i.e., data with a single feature), no exact solution method exists. In the one-dimensional case, efficient methods leverage the fact that the problem can be reformulated as a global optimization task for a symmetric Lipschitz-continuous function, which can be solved using the global optimization algorithm DIRECT.   We propose a method for finding a globally optimal \( k \)-partition in the general case (\( n \)-dimensional data, \( n > 1 \)), extending an approach originally designed for solving Lipschitz global optimization for symmetric functions. Our method integrates a global optimization algorithm with linear constraints and the \( k \)-means algorithm. The global optimization component is used solely to generate a high-quality initial approximation for \( k \)-means.   We evaluated our approach on multiple artificial datasets and several benchmark examples from the UCI Machine Learning Repository. The results demonstrate that the proposed method is more efficient compared to some other methods from the literature. "
+71,Tamas,Titkos,"MS35: Preserver Problems, II",Isometries of Lipschitz free Banach spaces,"In the first part of the talk, I will focus on isometries of $\mathcal{W}_p(M)$ spaces, mainly in the case when $p=1$ -- the case which is closely connected to the theory of Lipschitz-free spaces. It is known that if $F$ is an isometry of M, then its push-forward $F_{\#}$ is an isometry of $\mathcal{W}_p(M)$. A natural question arises: is this embedding surjective? We know several concrete examples where the answer is yes, but the answer, in general, is no. In the second part of the talk, I will present some new results about isometries of Lipschitz-free spaces. In particular, I will describe surjective linear isometries and linear isometry groups of a large class of Lipschitz-free spaces.
+"
+72,Susana,Furtado,MS21: Linear algebra techniques in graph theory,Approximation of reciprocal matrices by consistent matrices,"An $n$-by-$n$ matrix $A=[a_{ij}]$ is said to be a pairwise comparison matrix (PC matrix)
+or a reciprocal matrix if it is positive and $a_{ij}=\frac{1}{%
+a_{ji}},$ for all $i,j=1,\ldots ,n.$ If, in addition, $a_{ik}a_{kj}=a_{ij}$ for
+all $i,j,k,$ the matrix is said to be consistent. Such a matrix is of the
+form $ww^{(-T)}$ for some positive vector $w$, in which $w^{(-T)}$ is the transpose of the entrywise
+inverse of $w$.
+
+PC matrices play an important role in decision making, namely in models for ranking
+alternatives, as the Analytic Hierarchy Process,  proposed by Saaty (1977). 
+In these models, a PC matrix represents independent, pairwise, ratio
+comparisons among $n$ alternatives and a cardinal ranking vector should be
+obtained from it. The consistent matrix constructed from this vector should
+be a good approximation of the PC matrix. So, it is desirable to choose a
+ranking vector from the set of efficient vectors, as, otherwise, there would
+be a positive vector such that the consistent matrix constructed from it
+better approximates the PC matrix in at least one entry and is not worse in
+all other entries. 
+
+It is known that a positive vector $w$ is efficient for a PC matrix $A$ if
+and only if a certain directed graph associated with $A$ and $w$ is strongly
+connected. Based on this result, here we give a description of the set of
+efficient vectors for a PC matrix as a union of a finite number of
+convex sets and discuss some of its consequences. In particular, tight lower
+and upper bound matrices for the consistent matrix constructed from an
+efficient vector are given. 
+
+(This is a joint work with Charles~Johnson.) 
+"
+73,Yi-Lin,Lee,MS25: Enumerative/algebraic combinatorics and matrices,"Domino tilings, domino shuffling, and the nabla operator","In this talk, I will present a $q,t$-generalization of domino tilings of certain regions $R_\lambda$, indexed by partitions $\lambda$, weighted according to generalized area and dinv statistics. These statistics arise from the $q,t$-Catalan combinatorics and Macdonald polynomials. We present a formula for the generating polynomial of these domino tilings in terms of the Bergeron--Garsia nabla operator. When $\lambda = (n^n)$ is a square shape, domino tilings of $R_\lambda$ are equivalent to those of the Aztec diamond of order $n$. In this case, we give a new product formula for the resulting polynomials by domino shuffling and its connection with alternating sign matrices. In particular, we obtain a combinatorial proof of the joint symmetry of the generalized area and dinv statistics. This is based on joint work with Ian Cavey."
+74,Osamu,Hatori,MS12: Preserver problems,"Isometries on groups of invertible elements in Fourier-Stieltjes algebras
+%The importance of linear algebra","If open subgroups of the groups of invertible elements in two Fourier-Stieltjes algebras are isometric as metric spaces, then the underlying locally compact groups are topologically isomorphic.
+"
+75,Aida,Abiad,MS17: Graphs and matrices in honor of Leslie Hogben's retirement,"Recent developments of switching methods for the construction of cospectral graphs
+","Switching is an operation on a graph that does not change the spectrum of the adjacency matrix, thus producing cospectral graphs. An important activity in the field of spectral graph theory is the characterization of graphs by their spectrum. Hence, switching provides a tool for disproving the existence of such a characterization. 
+
+In this talk we will overview recent progress on switching methods for the construction of cospectral graphs. Work by Wang and Xu (2010) suggests that most cospectral graphs with cospectral complements can be constructed using regular orthogonal matrices of level 2, which has relevance for Haemers' conjecture. In this direction, we will present two new switching methods based on regular orthogonal matrices of level 2. We will also show a general framework for counting the number of graphs that have a non-isomorphic cospectral graph through any of the existing switching methods for the adjacency matrix, expanding on the work by Haemers and Spence (2004).  
+
+This is joint work with Nils van de Berg and Robin Simoens.
+"
+76,Michiya,Mori,MS12: Preserver problems,"On the Scottish Book Problem 155 by Mazur and Sternbach
+","The Scottish Book was a notebook used by mathematicians of the Lw\'ow School of Mathematics in Poland to collect unsolved problems in mathematics.
+Problem 155 of the Scottish Book asks whether every bijection $U\colon X\to Y$ between two Banach spaces $X, Y$ with the property that, each point of $X$ has a neighborhood on which $U$ is isometric, is globally isometric on $X$. 
+In this talk, I will explain that this is true under the additional assumption that $X$ is separable and the weaker assumption of surjectivity instead of bijectivity.
+"
+77,Franklin,Kenter,MS15: Graphs and their eigenvalues: Celebrating the work of Fan Chung Graham,A geometric adaptation of the Chung-Lu graph model,"The Chung-Lu graph model specifies the expected degree of each vertex in a graph and, provided the degree distribution is not excessively skewed, generates a random graph where the existence of each edge is determined independently.
+
+A common characteristic of many ``real-world'' graphs is a degree distribution that follows an inverse power law. Specifically, the number of vertices with degree $x$ is proportional to $x^\beta$, where $\beta$ typically ranges between 1 and 3. The Chung-Lu model offers a straightforward approach to capturing this power-law behavior in synthetic networks.
+
+We extend the Chung-Lu model to random geometric graphs. In this extension, each vertex is assigned both an expected degree and a random position in Euclidean space according to a probability distribution. Once the vertices are placed, the realization of each edge occurs independently of others. We rigorously establish the conditions necessary to ensure that the assigned degrees align with the expected degrees. This geometric Chung-Lu model is tested on the connectome of the \emph{Drosophila} medulla (fruit fly), where the random model successfully replicates the graph-theoretical structure of the original network, including the eigenvalues of various graph-theoretic matrices.
+
+This is joint work with Susama Agarwala.
+"
+78,Franklin,Kenter,MS17: Graphs and matrices in honor of Leslie Hogben's retirement,"Leaky forcing: extending zero forcing results to a fault-tolerant setting
+","We study a recent variation of zero forcing called leaky forcing.  Zero forcing is a propagation process on a network whereby some nodes are initially blue with all others white. Blue vertices can ``force'' a white neighbor to become blue if all other  neighbors are blue. The goal is to find the minimum number of initially blue vertices to eventually force all vertices blue after exhaustively applying the forcing rule above.
+Leaky forcing is a fault-tolerant variation of zero forcing where certain vertices (not necessarily initially blue) cannot force. The goal in this context is to find the minimum number of initially blue vertices needed that can eventually force all vertices to be blue, {\it regardless} of which small number of vertices can't force.
+
+This work extends results from zero forcing in terms of leaky forcing. New results regarding leaky forcing presented here include:
+\begin{itemize}
+\item Complete determination of all leaky forcing numbers for all unicyclic graphs.
+\item Robust upper bounds for generalized Petersen graphs.
+\item Bounds for the effect of both edge removal and vertex removal.
+\item A complete characterization for which connected graphs have the maximum possible $1$-leaky forcing number (i.e., when $Z_{(1)}(G) = |V(G)|-1$).
+\end{itemize}
+
+This is joint work with 
+Beth Bjorkman, Lei Cao, Ryan Moruzzi, Carolyn Reinhart and Violeta Vasilevska and is part of the AIM Mathematical Research Communities. 
+"
+79,Koushik,Bhakta,Contributed talk,Grover walks on unitary Cayley graphs and integral regular graphs,"Quantum walk on graphs is an important concept that lies at the intersection of quantum information and graph theory. There are two types of quantum walk: continuous-time quantum walk and discrete-time quantum walk. We focus on the Grover walk, a type of discrete-time quantum walk. The unitary Cayley graph  has vertex set $\{0,1, \hdots ,n-1\}$, where two vertices  $u$ and $v$ are adjacent if $\gcd(u - v, n) = 1$. We study periodicity and perfect state transfer of Grover walks on the unitary Cayley graphs. We characterize all periodic unitary Cayley graphs. We prove that periodicity is a necessary condition for the occurrence of perfect state transfer on a vertex-transitive graph. Also, we provide a necessary and sufficient condition for the occurrence of perfect state transfer on circulant graphs. Using these, we prove that only four graphs in the class of unitary Cayley graphs exhibit perfect state transfer. Also, we provide a spectral characterization of the periodicity of Grover walks on integral regular graphs.
+"
+80,Enide,Andrade,MS21: Linear algebra techniques in graph theory,"Doubly stochastic matrices and graphs
+","In this talk we present a study about inverses of modified Laplacian matrices; the modification is by adding the
+identity matrix which gives a positive definite matrix. We investigate the relationship between
+the underlying graph and the properties of this inverse. 
+
+%Some related questions are also
+%. The questions and objects are of interest to the matrix theory community and may also
+%be of interest in applications involving Laplacians.
+
+
+
+"
+81,Geir,Dahl,MS24: Nonnegative and related families of matrices,"Near-derangements and polytopes
+","A derangement is a permutation with no fixed point. This talk deals with  {\em near-derangements}, defined as permutations with at most one fixed point. We present some properties of  the corresponding set of permutation matrices $\mathcal{P}^{(\le 1)}_n$. 
+  Also, we briefly discuss  the polytope determined by $\mathcal{P}^{(\le 1)}_n$ and the related polytope $\mathcal{P}^*$ of  all $n\times n$  doubly stochastic matrices with trace at most 1.
+  In particular, all its  extreme points of $\mathcal{P}^*$ are determined. 
+This is joint work with Richard A. Brualdi.
+"
+82,Zilin,Jiang,MS2: Combinatorial matrix theory,"Median eigenvalues of subcubic graphs
+","We present a resolution to conjectures by Fowler, Pisanski, and Mohar regarding the median eigenvalues of subcubic (chemical) graphs. Specifically, we prove that the median eigenvalues of every connected graph with maximum degree at most three, except for the Heawood graph, lie within the interval $[-1, 1]$. This result has significant implications in mathematical chemistry, particularly in the analysis of molecular orbital models, and extends prior work on bipartite chemical graphs.
+"
+83,Kshitij,Sharma,Contributed talk,"Combinatorial description of the inverse of the adjacency matrix of non-bipartite bicyclic graphs
+","Barik et al. [On nonsingular trees and a reciprocal eigenvalue property, Linear Multilinear Algebra, 54(6)(2006) 453-465] provided a combinatorial description of the inverse of the adjacency matrix for bipartite graphs in terms of $mm$-alternating paths, enabling deeper exploration of bipartite graph properties. However, for non-bipartite graphs, a similar framework remained an open challenge. In 2022, a combinatorial description was established for non-bipartite unicyclic graphs.
+This paper advances the understanding of non-bipartite graphs by providing a comprehensive combinatorial description of the inverse of the adjacency matrix for non-bipartite bicyclic graphs, utilizing $mm$-alternating paths between vertices. It further determines the conditions under which the adjacency matrix of a bicyclic graph is unimodular and establishes criteria for the adjacency matrix of a non-bipartite graph to be signable. Additionally, it is definitively shown that the inverse graph of a non-bipartite bicyclic graph remains non-bipartite, reinforcing the structural properties of such graphs.
+
+"
+84,Helena,Smigoc,MS2: Combinatorial matrix theory,"Characteristic polynomials of structured nonnegative matrices
+","We consider the set of characteristic polynomials of nonnegative Hessenberg matrices. We show that this set is closed under the subtraction of polynomials with nonnegative coefficients, and explore the implications of this result. In particular, we generate a large set of characteristic polynomials of nonnegative Hessenberg matrices. We further discuss the zero-nonzero patterns of the corresponding realising matrices.
+"
+85,Helena,Smigoc,MS27: Linear algebra education,"Posing a question
+","Linear algebra is included in the curriculum for students pursuing various degrees such as computer science, biology, engineering, and pure mathematics. When students from different fields are in the same classroom, it can be challenging to tailor instruction to meet everyone's needs.  We will explore ways of setting a problem in this context, with the aim to motivate students with diverse interests, and  develop their understanding of the topic.
+"
+86,Masatoshi,Ito,MS29: Matrix functions and related topics,"The weighted power difference mean and its generalization
+","Pal, Singh, Moslehian and Aujla (2016) introduced the weighted logarithmic mean for two positive numbers
+ or operators on a complex Hilbert space, which is based on an extension of the Hermite-Hadamard inequality.
+Furuichi and Minculete (2020) obtained a refinement of the inequality by Pal et al.
+On the other hand, we discussed relations among some weighted operator means
+ by considering the notion of a transpose symmetric path of weighted means,
+ and we introduced the weighted Heinz mean.
+In this talk, based on these arguments,
+ we  newly introduce the weighted power difference mean and get relations
+ among the weighted power, power difference and arithmetic means.
+Moreover, we generalize these results from the viewpoint of a transpose symmetric path.
+
+"
+87,Takeshi,Miura,MS12: Preserver problems,"Surjective isometries on Banach spaces with derivatives
+","We shall give the characterization of surjective, possibly nonlinear,
+isometries from Banach spaces with derivatives.
+This unifies the former results on isometries on the following
+Banach spaces:
+\begin{enumerate}
+\item
+$C^1([0,1])$ of all continuously differentiable complex-valued functions
+on the closed interval $[0,1]$.
+
+\item
+The Banach space of all continuous extensions to $\overline{\mathbb{D}}$,
+the closure of the open unit disc $\mathbb{D}$,
+of all analytic functions on $\mathbb{D}$,
+which can be extended to continuous functions on $\overline{\mathbb{D}}$.
+
+\item
+The Banach space of all Gelfand transforms of analytic functions
+on $\mathbb{D}$ whose derivatives are bounded on $\mathbb{D}$.
+\end{enumerate}
+"
+88,Ngoc Muoi,Bui,MS7: Linear algebra and quantum information science,"On entanglement-breaking quantum channels
+","Entanglement breaking (EB) channel is a completely positive and trace-preserving linear operator that disrupts the entanglement between the input system with any system. Examples of EB channels include depolarizing channels, quantum-classical channels, etc. We will discuss some characterizations of the class of EB channels for finite- and infinite-dimensional quantum systems. In particular, we show some sufficient conditions for channels to be EB."
+89,Peter Chang-Yi,Weng,MS1: Embracing new opportunities in numerical linear algebra,"Generalized Smith method for large-scale nonsymmetric algebraic Riccati equations
+","This paper presents an effective algorithm about a computation of the numerical
+low-rank solution to a large-scale nonsymmetric algebraic Riccati equation with
+a nonsingular $M$-matrix. The method first applies the Newton’s method to compute the nonsymmetric algebraic Riccati equation, followed by a derivation of
+generalized Sylvester equations. By extending the Smith method, the proposed
+algorithm achieves a quadratic convergence and has the $O(n)$ computational
+complexity. A detailed convergence, error analysis, truncation and compression
+process, and numerical examples will be provided."
+90,Emanuel Juliano,Morais Silva,MS2: Combinatorial matrix theory,"Spectral upper bounds for the Grundy number of a graph
+","The Grundy number of a graph is the minimum number of colors needed to properly color the graph using the first-fit greedy algorithm regardless of the initial vertex ordering. Computing the Grundy number of a graph is an NP-Hard problem. There is a characterization in terms of induced subgraphs: a graph has a Grundy number at least k if and only if it contains a $k$-atom. 
+In this talk, we focus on a natural quotient matrix of the adjacency matrix of $k$-atoms and use its combinatorial properties to derive bounds on the Grundy number in terms of the largest eigenvalue and the size of the graph.
+This talk is based on a joint work with Gabriel Coutinho and Thiago Assis.
+"
+91,Akash,Kalita,Contributed talk,Pretty good fractional revival on abelian Cayley graphs,"Let $\Gamma$ be a graph with the adjacency matrix $A$. The transition matrix of $\Gamma$, denoted $H(t)$, is defined as $H(t) := \exp(-\textbf{i}tA)$, where $t \in \mathbb{R}$ and $\textbf{i} := \sqrt{-1}$. The graph $\Gamma$ exhibits pretty good fractional revival (PGFR) between the vertices $a$ and $b$ if there exists a sequence $\{t_k\}$ in $\mathbb{R}$ such that $\lim_{k\to\infty} H(t_k){\textbf{e}_{a}} = \alpha{\textbf{e}_{a}} + \beta{\textbf{e}_{b}}$, where $\alpha, \beta(\neq 0) \in \mathbb{C}$ with $|\alpha|^2 + |\beta|^2 = 1$. In particular, if $\alpha = 0$, then $\Gamma$ exhibits pretty good state transfer (PGST) between $a$ and $b$. In this study, we first present a necessary and sufficient condition for the existence of PGFR on Cayley graphs over abelian groups. Using that necessary and sufficient condition, we prove that complement of a cycle on $2 p^s$ vertices, where $p$ is an odd prime and $s$ is a positive integer, exhibits PGFR.  In the class of unitary Cayley graphs, we prove that an unitary Cayley graph on $n$ ($n \geq 8$) vertices exhibits PGFR if and only if $n = 2p$, where $p$ is an odd prime. The preceding two classes of circulant graphs provide infinitely many circulant graphs exhibiting PGFR that fails to exhibits PGST. Further we obtain more circulant graphs exhibiting PGFR. We also obtain some classes of circulant graphs not exhibiting PGFR. Some of our results generalize the results of Chan et al. [Pretty good quantum fractional revival in paths and cycles. \textit {Algebr. Comb.} 4(6) (2021), 989-1004.] for cycles.        
+"
+92,Shih-Hao,Huang,MS20: Manifold learning and statistical applications,"Coordinate testing for general sufficient dimension reduction methods
+","In modern data analysis, the number of covariates is often large, and the relationship between covariates and response is often complex. Parametric regression risks model misspecification, while nonparametric regression suffers from the curse of dimensionality. Sufficient dimension reduction (SDR) regression provides a flexible alternative, summarizing covariate effects through a few linear combinations without imposing a specific functional form. While SDR methods have been extensively studied, coordinate testing, which assesses the contribution of a set of linear combinations of covariates, has been largely overlooked. To address this gap, we propose a novel method that transforms the coordinate testing problem into a dimension testing problem by applying appropriate residualization. Since dimension tests are well-established, this method allows practitioners to leverage existing inference tools within the SDR framework.
+"
+93,Soichi,Okada,MS25: Enumerative/algebraic combinatorics and matrices,"Bounded Littlewood identities for cylindric Schur functions and related combinatorics
+","The bounded Littlewood identities are determinant formulas for 
+the sum of Schur functions indexed by partitions with bounded height. 
+These have interesting combinatorial consequences involving 
+standard Young tableaux of bounded height. In this talk, we 
+give affine analogs of the bounded Littlewood identities, which 
+are determinant formulas for sums of cylindric Schur functions. 
+As an application, we obtain equinumerous results between cylindric 
+standard Young tableaux and partial matchings.
+
+This talk is based on a joint work with JiSun Huh, Jang Soo Kim, 
+and Christian Krattenthaler.
+"
+94,Yotsanan,Meemark,Contributed talk,"Spectral properties and perfect state transfer in unitary $(t-1)$-matching $t$-Cayley graphs
+","We introduce a new family of Cayley graphs arising from a collection of subsets of a finite group. It is a generalization of a Cayley graph and a bi-Cayley  graphs, so we call it a $t$-Cayley graph. Let ${\mathcal{R}}$ be direct products of finite matrix rings.
+ We work on  unitary $(t-1)$-matching $t$-Cayley graph of ${\mathcal{R}}$ and its complement graph. We show that the graphs are hyperenergetic and obtain a criterion on $t$ and the rings ${\mathcal{R}}$ for each graph being a Ramanujan graph.  Moreover, we show that the unitary $(t-1)$-matching $t$-Cayley graph of ${\mathcal{R}}$ is always periodic and also
+  characterize $t$ and the rings ${\mathcal{R}}$ such that its corresponding unitary $(t-1)$-matching $t$-Cayley graph has perfect state transfer between vertices."
+95,Peter,Semrl,MS12: Preserver problems,"Local order isomorphisms on operator and matrix domains
+","Let $H_n$ denote the set of all $n\times n$ complex hermitian matrices and $S_n$ the set of all $n \times n$ real symmetric matrices. A subset $U \subset H_n$ ($U \subset S_n$) is called a matrix domain if it is open and connected. The general form of maps $\phi : U \to H_n$ ($\phi : U \to S_n$) preserving the usual Loewner order in both directions will be discussed. We will also treat the infinite-dimensional case.
+"
+96,Daisuke,Hirota,"MS35: Preserver Problems, II","Tingley's problem concerning the direct sum of extremely C-regular subspaces with the $\ell^p$-norm.
+","Tingley's problem asks whether every surjective isometry between the unit spheres of two Banach spaces can be 
+extended to a surjective real-linear \nobreak{isometry} between the whole spaces. 
+Let $\{A_{\lambda}\}_{\lambda\in\Lambda}$ be a family of uniformly closed, extremely C-regular subspaces,  
+and 
+let $p$ be a real number such that $1<p<\infty$ with $p\neq 2$. 
+We denote by $A_{\Lambda}^{p}$ the Banach space of formed by the direct sum of $\{A_{\lambda}\}_{\lambda\in \Lambda}$ 
+equipped with the norm $\|{\bm{f}}\|_{p}=\left(\sum_{\lambda\in \Lambda}\|{\bm{f}}_{\lambda}\|_{\infty}^{p}\right)^{1/p}$ for ${\bm{f}}\in A_{\Lambda}^{p}$. \\
+\quad In this presentation, I will speak on the fact that
+ if $\Delta$ is a surjective isometry between two unit spheres $S(A_{M}^{p})$ and $S(A_{N}^{p})$ of the Banach spaces 
+ $A_{M}^{p}$ and $A_{N}^{p}$, 
+ then $\Delta$ admits an extension to a surjective real-linear isometry between the whole spaces."
+97,Bibekananda,Sitha,"MS5: Advances in matrix equations: Theory, computations, and applications",Dual core-EP generalized inverse and decomposition,"In this work, we introduce a new type of generalized inverse called dual core-EP generalized inverse (in short DCEPGI) for dual square matrices. We analyze the existence and uniqueness of the DCEPGI inverse and its compact formula using dual Drazin and dual MP inverses. Moreover, some characterizations using core-EP  decomposition are obtained. We present a new dual matrix decomposition named the dual core-EP decomposition for square dual matrices. In addition, some relationships with other dual generalized inverses are established. Solutions to some inconsistent system of linear dual equations are derived."
+98,Daryl,Granario,MS31: Matrix decompositions and applications,"Some factorizations in the complex symplectic group
+","As one of the classical Lie groups, the complex symplectic group is fundamental not only in mathematics but also in various related fields. We look at some important matrix decompositions when restricted to the complex symplectic group. In particular, we look at how we can use symplectic versions of canonical forms to derive decompositions such as the one given by Ballantine concerning products of positive definite matrices, and the one given by Sourour concerning the spectra of factors in a product of matrices.
+"
+99,Yu-Jie,Huang,MS20: Manifold learning and statistical applications,Application of VoxelMorph and SynthMorph for multitype 3D medical image registration,"In this work, we explore the application of VoxelMorph and SynthMorph for 3D medical image registration. VoxelMorph provides a deep learning-based framework that utilizes deformable pairwise registration, enabling the alignment of complex anatomical structures through continuous deformation fields. By modeling transformations as smooth manifolds, VoxelMorph facilitates precise, non-rigid alignment, making it well-suited for capturing intricate deformations in medical images. SynthMorph further extends this approach, offering a robust method for image registration across diverse MRI contrasts, effectively handling variations in image intensities without relying on acquired imaging data. We investigate how these deformable models can be integrated into existing medical imaging workflows to enhance multi-type image registration, improving the alignment of images with varying anatomical and contrast properties."
+100,Szu Han,Lin,MS20: Manifold learning and statistical applications,"Distributed $t$-SNE
+","The $t$-distributed stochastic neighbor embedding method  ($t$-SNE, Maaten
+and Hinton, 2008) has gained popularity for data exploration, particularly for its highly effective visualization of high-dimensional data, offering valuable insights before analysis. However, with a computational complexity of $O(n^2)$, its applicability to large datasets is limited. In practical applications, the Barnes-Hut $t$-SNE  (BH $t$-SNE, Maaten, 2014), a $t$-SNE variant with computational complexity $O(n\log n)$, is commonly employed for large datasets due to its high computational efficiency. In this work, we propose a divide-and-conquer approach that further reduces the computational complexity to $O(n)$, significantly lowering both computational time and memory usage by processing only subsets of the data at a time. Implementing the divide-and-conquer approach requires careful parameter adjustments to ensure asymptotic equivalence to the original $t$-SNE. We provide theoretical proof of this convergence and support our findings with simulation studies on the MNIST dataset. In summary, this work offers a scalable solution for applying $t$-SNE to extremely large datasets, maintaining its consistency and efficiency.
+"
+101,Nikolai,Krivulin,Contributed talk,"An alternating algorithm for tropical best discrete approximation
+","We consider a best discrete approximation problem in the setting of tropical (idempotent) algebra dealing with the theory and application of semirings and semifields with idempotent operations. Given a set of input-output pairs of an unknown function defined on a tropical semifield, the problem is to determine an approximating rational function formed by two Puiseux polynomials as numerator and denominator in the function. With specified numbers of monomials in both polynomials, the approximation aims at evaluating the exponent and coefficient for each monomial in the polynomials to fit the rational function to the given data in the sense of a tropical distance function. To solve the problem, we transform it into approximation of a vector equation with unknown vectors on both sides with one side answered to the numerator polynomial and the other side to the denominator. Each side of the equation involves a matrix with entries dependent on the unknown exponents, multiplied by the vector of unknown coefficients of monomials in the corresponding polynomial. We propose an algorithm that constructs a series of approximate solutions by alternatively fixing one side of the equation to the already found result and leaving the other intact. The obtained equation is first approximated with respect to the vector of coefficients, which results in a vector of coefficients and approximation error both parameterized by the exponents. Furthermore, the values of exponents are found by minimization of the approximation error, using an optimization procedure that is based on an agglomerative clustering technique. To illustrate applications, we present results for approximation problems formulated in terms of max-plus algebra (a real semifield with addition defined as maximum and multiplication as arithmetic addition), which correspond to ordinary problems of piecewise linear approximation of real functions. As our numerical experience shows, the proposed algorithm converges in a finite number of steps and provides a reasonably good solution to approximation problems considered.   
+"
+102,Qing,Li,MS1: Embracing new opportunities in numerical linear algebra,"Determine the exact value of the square root of $2$
+","The calculation of the exact value of the square root of $2$ is requested. In order to obtain its infinite value, A new concept is proposed where the accumulations of the infinitely many of finity is indicated by the change in direction which means that there is a jump from finity to infinity .The meaningless for an infinite number with a decimal point is indicated by this jump because any decimal number only have meanings within a finite range values and there is only an infinite integer quantity that can not be operated by algorithms like operations of multiplication,division,addition, and subtraction . The final result of the change in direction is two quantity where the second quantity and the first quantity extend in parallel line and never intersect and the second quantity represent the size of the first quantity. The first quantity is the infinitely great that can't be talked about anything outside of it and can compress any quantities outside of it to nothing and it is the exact value of the square root of $2$ . "
+103,Hieu,Ha Van,Contributed talk,"AMDS symbol-pair constacyclic codes
+","Let $p$ be an odd prime, and let $\mathbb F_p$ be the finite field with $p$ elements. In this talk, I will first construct new AMDS symbol-pair cyclic codes of length $4p$ by analyzing their generator polynomials. Then, using the generator polynomial, I derive a family of AMDS symbol-pair constacyclic codes of the same length.
+"
+104,Mary,Flagg,MS17: Graphs and matrices in honor of Leslie Hogben's retirement,"Reconfiguring a community
+","Reconfiguration is a process of transforming one feasible solution to a problem into another feasible solution in small incremental steps while maintaining the property of being a solution at each step. In the case of graph theory, solutions to problems are often subsets of the vertex set with a specific property. We refer to these as vertex set parameters. In this talk I will share a universal approach to vertex set parameter reconfiguration developed with Leslie Hogben and Bryan Curtis that is applied to zero forcing variants as well as other common graph parameters. Zero forcing was developed in this community to be an upper bound to the nullity of any real symmetric matrix with off-diagonal zero pattern determined by the adjacency matrix of a given graph. Understanding zero forcing sets has applications to understanding eigenvalues and eigenvectors of these matrices. 
+Reconfiguration is also a description of how Leslie Hogben has helped to change our community for the better, one step at a time by facilitating community and research opportunity to graduate students, new researchers and faculty at undergraduate institutions. I will share my perspective on her reconfiguration efforts.
+"
+105,Pinki,Khatun,MS11: Structured matrix computations and its applications,"Structured backward errors for special classes of saddle point problems with applications
+","Saddle point problems (SPPs) have garnered significant attention in recent times due to their pervasive occurrence in applications such as computational fluid dynamics and constrained and weighted least square estimation. Many numerical algorithms have been developed to find the efficient solution of the {SPP}  with {{circulant}}, {Toeplitz}, or {symmetric}-{Toeplitz} block matrices. This prompts a natural inquiry: can an approximate solution obtained from a numerical algorithm be the exact solution to a nearly perturbed problem? The concept of backward error ({BE})  is used to determine how far a computed solution stands from the original problem. Recent research efforts have focused on exploring the  BE for SPPs. However, these investigations overlook the inherent sparsity pattern and {{circulant}},  {Toeplitz} or symmetric-Toeplitz structures of the coefficient matrix of the SPP. To overcome these limitations, we investigate the structured  {BEs} of {SPPs} when the perturbation matrices exploit the sparsity pattern as well as { {circulant}},  {Toeplitz}, and  {symmetric}-{Toeplitz} structures. Furthermore, we construct minimal perturbation matrices that preserve the sparsity pattern and the aforementioned structures. One application of the obtained results is discussed in deriving structured  {BEs} for the weighted regularized least squares problem. Numerical experiment are performed to validate our findings, showcasing the utility of the obtained structured  {BEs} in assessing the strong stability of numerical algorithms.
+"
+106,Valerio,Loi,"MS19: Explicit and hidden asymptotic structures, GLT Analysis, and applications","Spectral analysis, approximation, and preconditioning for block structured matrix-sequences
+","Large block-structured matrices with Toeplitz-type blocks of different sizes frequently arise in various applications, but pose computational issues when solving the associated linear systems. In our setting, the matrices \(A_n\) are composed of (block rectangular) Toeplitz blocks defined by rectangular \(s \times t\) matrix-valued generating functions, and can be viewed as a generalization of classical GLT (Generalized Locally Toeplitz) sequences. Under mild assumptions on the block dimensions, the asymptotic distribution of the singular values of the associated matrix sequences is recently known. Moreover, when the singular value symbol is Hermitian, the spectral symbol coincides with the singular value symbol. Starting from the tools used to determine this singular value distribution, we develop a general preconditioning framework to construct simplified block matrices that approximate the original matrices. These simplified matrices offer two key advantages:\\
+1. They maintain the same singular value distributions as \(\{A_n\}_{n}\); \\
+2. They enable the solution of linear systems in \(\mathcal{O}(n \log n)\) arithmetic operations.\\
+In this way, we propose a natural preconditioning strategy for linear systems with coefficient matrix \(A_n\). We provide detailed singular value and spectral analyses of the preconditioned matrix sequences and validate our approach through numerical experiments concerning the convergence of various (preconditioned) Krylov solvers.
+"
+107,Michael,Orlitzky,"MS28: From matrix theory to Euclidean Jordan algebras, FTvN systems, and beyond","Jordan and isometric cone automorphisms in Euclidean Jordan algebras
+","Every symmetric cone $K$ arises as the cone of squares in a Euclidean
+Jordan algebra $V$. As $V$ is a real inner-product space, we may
+denote by $\operatorname{Isom}\left(V\right)$ its group of
+isometries. The groups $\operatorname{JAut}\left(V\right)$ of its
+Jordan-algebra automorphisms and $\operatorname{Aut}\left(K\right)$
+of the linear cone automorphisms are then related. For certain inner
+products,
+%
+\begin{equation*}
+  \operatorname{JAut}\left(V\right)
+  =
+  \operatorname{Aut}\left(K\right)
+  \cap
+  \operatorname{Isom}\left(V\right).
+\end{equation*}
+%
+We characterize the inner products for which this holds.
+"
+108,Sushil,Singla,"MS35: Preserver Problems, II","Linear maps preserving product of involutions
+","Let $M_n(\mathbb F)$ the algebra of $n \times n$ matrices over a field  $\mathbb F$.  A matrix $A\in M_n(\mathbb F)$ is said to be involution if $A^2=I$ (the identity matrix in $M_n(\mathbb F)$). Two interesting known facts about the product of involutions are as follows.\\ \\
+ (a) A matrix in $  M_n(\mathbb F)$ is similar to its inverse if and only if it can be written as a product of two involutions in $M_n(\mathbb F)$.\\ \\
+ (b) An element $X \in M_n(\mathbb F)$ has $\det(X) =\pm 1$ if and only if $X$ can be written as a product of at most four involutions from $M_n(\mathbb F)$. As a consequence, any matrix which is products of involutions can be written as product of at most four involutions.\\ \\
+In this talk, we will investigate the bijective linear preservers of matrices in $M_n(\mathbb F)$, which are products of at most two, or three, or four involutions. This is a joint work with Chi-Kwong Li and Tejbir Lohan.
+
+"
+109,Chih-Sheng,Chuang,Contributed talk,"Algorithms and inertial algorithms for the inverse mixed variational inequality problems in Hilbert spaces
+","The inverse mixed variational inequality problem comes from the classical variational inequality, and it has many
+applications. In this paper, we propose new algorithms to study the inverse mixed variational inequality problems in Hilbert spaces, and these algorithms based on the generalized projection operator. Next, we establish convergence theorems under inverse strongly monotonicity conditions. Besides, we also give inertial-type algorithms for the inverse mixed variational inequality problems, and the conditions are different from the above convergence theorems. 
+"
+110,Manu,Mathew,Contributed talk,"Completely positive factorization
+","A real symmetric matrix $M$ of size $n$ is a completely positive matrix if there exists a real non-negative(entrywise) matrix $B$ of size $n\times m$ such that $M=BB^T$. Completely positive matrix has applications in block designs, complementarity problems and optimization problems. The collection of all completely positive matrices of size $n$  is a proper cone in the vector space of all real symmetric matrices of size $n$. The dual of the completely positive cone is the copositive cone. These cones are widely studied in copositive programming. It is well known that a positive semidefinite matrix $M$ of size $n$ can be factorized as $M=AA^T$ for some real matrix $A$ of size $n$. The membership problem of the completely positive matrices is proven to be NP-hard. In this talk, we discuss, a sufficient condition for a symmetric matrix $M$ to be completely positive, when $M$ has initial factorization $M=AA^T$. We also find a completely positive factorization of $M$ when it is completely positive."
+111,Bit-Shun,Tam,Contributed talk,On the maximal $A_\alpha$-index of graphs with a prescribed number of edges,"\noindent  For any real number $\alpha\in [0,1]$, by the {\it
+$A_\alpha$-matrix} of a graph $G$ we mean the matrix
+$A_{\alpha}(G)=\alpha D(G)+(1-\alpha)A(G)$, where $A(G)$ and $D(G)$
+are the adjacency matrix and the diagonal matrix of vertex degrees
+of $G$, respectively. The largest eigenvalue of $A_{\alpha}(G)$ is
+called the $A_\alpha$-index of $G$. Chang and Tam (2023) have solved
+the problem of determining graphs with maximal $A_{\alpha}$-index
+over $\mathcal{G}(n,m)$, the class of graphs with $n$ vertices and
+$m$ edges, for $\alpha \in [\frac{1}{2},1)$ and $1\le m\le 2n-3$. In
+the same paper, they posed the problem of characterizing graphs in
+$\mathcal{G}(n,m)$ that maximize the $A_{\alpha}$-index for $0<
+\alpha < \frac{1}{2}$ and $m\le n-1$. In this work, it is noted
+that, for any $\alpha\in [0,1)$, the problem of characterizing
+graphs with maximal $A_{\alpha}$-index over $\mathcal{G}(n,m)$ with
+$m\le n-1$ is equivalent to the problem of characterizing graphs
+with maximal $A_{\alpha}$-index over $\mathscr{S}(m)$, the class of
+graphs with $m$ edges. In connection with the latter problem, we
+pose the following conjecture: Let $m\ge 3$ be a positive integer
+and suppose that $m={d\choose 2}+t$ with $0\le t < d$. There exists
+a real number $\alpha_0$, $\alpha_0=\frac{1}{2}$ for $m=3$ and
+$\alpha_0\in [0,\frac{1}{2})$ for $m\ge 4$, such that for any
+$\alpha \in [0,1)$, $C^m_{d+1}$ (replaced by $K_d$, in case $t=0$),
+where $C^m_n$ denotes the quasi-complete graph with $n$ vertices and
+$m$ edges, or $K_{1,m}$ is the unique connected graph with $m$ edges
+that maximize the $A_{\alpha}$-index over $\mathscr{S}(m)$,
+depending on whether $\alpha\in [0,\alpha_0)$ or $\alpha\in
+(\alpha_0,1)$; when $\alpha = \alpha_0$, there are exactly two
+connected graphs that maximize the $A_{\alpha}$-index over
+$\mathscr{S}(m)$, namely, $C^m_{d+1}$ (or $K_d$, in case $t=0$) and
+$K_{1,m}$. The conjecture is established when $t=0$.
+
+\vspace{2mm} \noindent{\it Keywords}\,: Maximal $A_{\alpha}$-index
+problem; Maximal graph; Threshold graph; Neighborhood equivalence
+classes; Quasi-complete graphs; Quasi-stars.
+ \vspace{2mm}
+
+\noindent{AMS subject classification:} 05C35,\ 05C50"
+112,Shuhei,Wada,MS29: Matrix functions and related topics,"On some multi-variable means of ALM type
+","The study of multivariable operator geometric means was pioneered by Ando, Li, and Mathias (ALM). In recent years, research has primarily focused on operator means obtained as solutions to operator equations. Nevertheless, there has been growing interest in operator means of ALM type, which are obtained by generalizing their approach. ALM-type means are particularly notable because the approximating sequences are explicitly given, making it easier to understand their properties. In this talk, we will introduce an example of an ALM-type mean and discuss its properties. Additionally, we will touch upon related results.
+"
+113,Stefano,Pozza,MS23: Advances in Krylov subspace methods and their applications,"Krylov subspace methods an the $\star$-algebra
+","The $\star$-algebra \cite{Man24} has been successfully employed to solve a system of linear ODEs with time-dependent coefficients by transforming the ODE into a system of linear $\star$-equations \cite{BonPozVan23,GisPoz}. Many classical linear algebra methods and decomposition can be recovered in the $\star$-algebra. The recovered methods are a time-dependent version of the original ones. For example, the $\star$-Lanczos algorithm \cite{GisPoz} generalizes the (classical) non-Hermitian Lanczos algorithm and extends the well-known connections between matrix moments, and the Lanczos algorithm \cite{GolMeu,PozPraStr} to the time-dependent case.
+The relation between the classical Krylov subspace methods and their $\star$-counterparts can be used as a way to compute the solution of ODEs by the $\star$-algebra approach and, vice versa, to analyze classical Krylov subspace methods for time-dependent matrices with possible applications to perturbed matrices.
+
+\begin{thebibliography}{99}
+\bibitem{BonPozVan23}
+Bonhomme, C., Pozza, P., Van Buggenhout, N.:
+A new fast numerical method for the generalized Rosen-Zener model. rXiv:2311.04144 [math.NA] (2023)
+
+\bibitem{GisPoz}
+Giscard, P-L., Pozza, S., A Lanczos-like method for non-autonomous linear ordinary differential equations. Boll. Unione Mat. Ital 16, 81--102 (2023)
+
+\bibitem{GolMeu}
+Golub, G.H., Meurant, G.: Matrices, Moments and Quadrature with Applications. Princeton University Press, Princeton (2010)
+
+\bibitem{PozPraStr}
+Pozza, S., Prani\'c, M.S., Strako\v s, Z.: Gauss quadrature for quasi-definite linear functionals. IMA J. Numer. Anal. 37(3), 1468--1495 (2017)
+
+\bibitem{Man24}
+Ryckebusch, M.: A Fr\'echet-Lie group on distributions. arXiv:2307.09037 [math.FA] (2024).
+
+\end{thebibliography}"
+114,Nian,Shao,MS23: Advances in Krylov subspace methods and their applications,"Lanczos with compression for symmetric eigenvalue problems
+","Lanczos method with implicit restarting is one of the most successful methods for finding a few eigenpairs of a large-scale symmetric matrix.
+Despite its widespread use, the core approach of employing polynomial filtering for restarting has remained unchanged over the past two decades.
+In this talk, we introduce a novel compression strategy, called Lanczos with compression, as an alternative to restarting.
+Unlike restarting, Lanczos with compression sacrifices the Krylov structure but preserves the subsequent Lanczos sequence.
+Theoretical analysis demonstrates that the compression introduces only a small error compared to the standard Lanczos method.
+Numerical results show that, in terms of matrix-vector products, our approach is never worse and often outperforms the restarting strategy, sometimes by a significant margin.
+"
+115,Shmuel,Friedland,MS8: Tensor and quantum information science,"On entaglement, separability and their computability","In this talk we survey some results on entanglement and separablity of general, symmetric (bosons),  skew-symmetric (fermions) tensors, and their computability.  We will survey briefly some results that I coauthored."
+116,Mark,Kempton,MS15: Graphs and their eigenvalues: Celebrating the work of Fan Chung Graham,"Nonbacktracking random walks: mixing rate, Kemeny's constant, and beyond","Random walks on graphs are ubiquitous in spectral graph theory, both in helping us understand graphs and for applications in graph algorithms.  Considerable research has been done in the last two decades around understanding how forbidding backtracking affects the random walk.  We will discuss past and current research on how forbidding backtracking affects mixing rates, hitting times, Kemeny's constant, and other aspects of random walks, and we will discuss some future directions for exploration.
+"
+117,Duc-Quoc,Huynh,Contributed talk,Nonmonotone diagonal quasi-Newton accelerated gradient descent methods for the nearest correlation matrix problems ,"The nearest correlation matrix (NCM) problem poses computational difficulties with critical implications in finance and actuarial science. Accurate correlation matrices are essential for effective risk management and investment strategies.  
+The NCM problem is mathematically formulated as a constrained optimization problem, often solved using the alternating projection method (APM) or alternating direction of multipliers method (ADMM) . However, its slow linear convergence and required complete eigenvalue decomposition at each iteration render it computationally expensive and impractical for large-scale problems. Alternatively, the NCM problem can be reformulated as an unconstrained optimization task in its dual form, taking advantage of its convex structure. It allows for a focus on minimizing the dual objective function by solving for the zeros of its gradient to satisfy first-order optimality conditions. Our proposed method belongs to the framework of the generalized linesearch iterative methods, incorporating two basic elements: search direction and stepsize determination. Additionally, we introduce two practical mechanisms, including an accelerated step and nonlinear preconditioning, to improve the method's robustness and efficiency.
+We proposed the quasi-Newton method with diagonal Jacobian approximation (QN-SDAJ), which is used as a nonlinear preconditioner to accelerate gradient descent, significantly reducing the number of iterations and computational time. Numerical results show that our proposed method outperforms existing alternatives, including accelerated gradient descent, semismooth inexact Newton, and APM, particularly for large-scale problems, demonstrating superior efficiency."
+118,Fumio,Hiai,Plenary talk,"Various inequalities for quasi-arithmetic mean and quasi-geometric type means of matrices","Our targets in this talk are the quasi extensions of the weighted arithmetic mean and of the weighted geometric type means, including the weighted geometric mean, the weighted spectral geometric mean, the R\'enyi mean, and the Log-Euclidean mean, for positive (semi)definite matrices. For example,
+\begin{align*}
+&\mathcal{A}_{\alpha,p}(A,B):=(\alpha A^p+(1-\alpha)B^p)^{1/p},
+\ \mbox{the quasi-weighted arithmetic mean}, \\
+&G_{\alpha,p}(A,B):=(A^p\#_\alpha B^p)^{1/p},
+\ \mbox{the quasi-weighted geometric mean}, \\
+&R_{\alpha,p}(A,B):=\bigl(B^{{1-\alpha\over2}p}A^{\alpha p}B^{{1-\alpha\over2}p}\bigr)^{1/p},
+\ \mbox{the R\'enyi mean}, \\
+&LE_\alpha(A,B):=\exp(\alpha\log A+(1-\alpha)\log B),
+\ \mbox{the weighted Log-Euclidean mean},
+\end{align*}
+where $\alpha\in(0,1)$ (or all $\alpha>0$) is the weight parameter and $p>0$ is the parameter of the quasi extension.
+For the quasi versions of these weighted matrix means we consider inequalities in different types of orders such as the Loewner order $\le$, the chaotic $\le_{\mathrm{ch}}$ (i.e., $\log X\le \log Y$), the near order $\le_{\mathrm{ne}}$ (i.e., $X\#Y^{-1}\le I$), the entrywise eigenvalue order $\le_\lambda$, the log-majorization $\prec_{\log}$, the weak majorization $\prec_w$, and the order under trace (i.e., $\mathrm{Tr}\,X\le\mathrm{Tr}\,Y$), whose order relations weaken in this writing order.
+Our objective is to pursue under which condition of the parameters $\alpha,p,q$ the inequality $\mathcal{M}_{\alpha,p}(A,B)\triangleleft\mathcal{N}_{\alpha,q}(A,B)$ holds for all positive (semi)definite matrices $A,B$, for any pair $(\mathcal{M}_{\alpha,p},\mathcal{N}_{\alpha,q})$ from the above quasi-weighted means and for any order $\triangleleft$ mentioned above.
+For instance, it is shown that $\mathcal{A}_{\alpha,p}(A,B)\le\mathcal{A}_{\alpha,q}(A,B)$ holds for all $A,B\ge0$ if and only if $p=q$ or $1\le p<q$ or $1/2\le p<1\le q$, whereas, for any other weaker order $\triangleleft$, $\mathcal{A}_{\alpha,p}(A,B)\triangleleft\mathcal{A}_{\alpha,q}(A,B)$ holds for all $A,B\ge0$ if and only if $p\le q$. When $(\mathcal{M}_{\alpha,p},\mathcal{N}_{\alpha,q})$ is a pair from the quasi-weighted geometric type means, we are mostly interested in the condition of $\alpha,p,q$ under which the log-majorization $\mathcal{M}_{\alpha,p}(A,B)\prec_{\log}\mathcal{N}_{\alpha,q}(A,B)$ holds and whether $AB=BA$ follows from the equality case $\mathrm{Tr}\,\mathcal{M}_{\alpha,p}(A,B)=\mathrm{Tr}\,\mathcal{N}_{\alpha,q}(A,B)$ in this situation."
+119,Massimiliano,Fasi,"MS5: Advances in matrix equations: Theory, computations, and applications","Mixed-Precision Algorithms for the Sylvester Matrix Equation
+","Modern supercomputers achieve their remarkable speeds by leveraging machine-learning hardware accelerators.
+These accelerators deliver extraordinary throughput by trading off some degree of accuracy, and, to fully utilise their potential, we must rely on low-precision floating-point formats such as binary16, bfloat16, or binary8.
+These reduced-precision formats can have a throughput up to two orders of magnitude higher than binary64, but they lack the precision needed for traditional scientific simulations, which require higher accuracy to yield meaningful results.
+To integrate GPUs effectively into scientific computing, we must reimagine high-precision computations by strategically applying lower precision whenever feasible.
+
+We consider techniques to solve the general Sylvester equation $AX + XB = C$ in mixed precision.
+By revisiting a stationary iteration for linear systems, we derive a new iterative refinement scheme for the quasi-triangular Sylvester equation.
+We then leverage this iterative scheme to solve the general Sylvester equation in mixed precision.
+The new algorithms compute the Schur decomposition of the matrix coefficients in low precision, use the low-precision Schur factors to obtain an approximate solution to the quasi-triangular equation, and iteratively refine it to obtain a working-precision solution to the quasi-triangular equation.
+However, being only orthonormal to low precision, the unitary Schur factors of A and B cannot be used to recover the solution to the original equation.
+We propose two effective approaches to address this issue: one is based on re-orthonormalization in the working precision, and the other on explicit inversion of the almost-unitary factors.
+
+This is joint work with Andrii Dmytryshyn, Nicholas J.~Higham, and Xiaobo Liu.
+ "
