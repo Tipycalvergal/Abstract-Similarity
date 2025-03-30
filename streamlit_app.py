@@ -63,8 +63,6 @@ with st.spinner("Loading data..."):
     tsne_results = tsne.fit_transform(vector_list)
 
     df_plot = pd.DataFrame({
-        "x": tsne_results[:, 0],
-        "y": tsne_results[:, 1],
         "TITLE": df["TITLE"],
         "TYPE_RAW": df["TYPE_RAW"],
         "TYPE": df["SIMPLIFIED_TYPE"],
@@ -87,6 +85,7 @@ fig = px.scatter(
     x="x",
     y="y",
     color="TYPE",
+    color_discrete_sequence=px.colors.qualitative.Alphabet,
     symbol="TYPE",
     hover_data=["TITLE", "TYPE_RAW", "Speaker"],
     title="Talks Similarity (t-SNE View)",
