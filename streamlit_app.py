@@ -94,7 +94,7 @@ fig = px.scatter(
         "TITLE": True,
         "TYPE_RAW": Flase,
         "Speaker": True
-    },,
+    },
     title="Talks Similarity (t-SNE View)",
     labels={"x": "t-SNE Dimension 1", "y": "t-SNE Dimension 2"}
 )
