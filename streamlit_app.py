@@ -45,10 +45,6 @@ def type_sort_key(t):
 st.title("📚 Talks Similarity Dashboard")
 st.markdown("""
 
-### This aspp is designed to explore the semantic similarity between academic talks using **spaCy embeddings** and **t-SNE dimensionality reduction**.
-
----
-
 ### 🔍 What Does This App Do?
 
 This dashboard analyzes talk **titles** and **abstracts**, projects them into a 2D space using t-SNE, and visualizes how similar they are based on their semantic content.
@@ -62,14 +58,6 @@ Each point in the scatter plot represents a talk. Talks that are **closer togeth
 - 🧬 **Text Embedding**: We use [`spaCy`](https://spacy.io/) to convert text into semantic vectors.
 - 📉 **t-SNE Projection**: These vectors are reduced to two dimensions using t-SNE for visualization.
 - 📊 **Interactive Plot**: Talks are colored by their type (e.g., *Plenary Talk*, *MS01*, etc.) for easy identification.
-
----
-
-### 🧭 How to Use
-
-1. Hover over points to explore talk metadata (title, type, speaker).
-2. Note the `index` number in the tooltip if you see a LaTeX-based title.
-3. Use the input below the chart to **preview the full LaTeX-rendered title**.
 
 ---
 
