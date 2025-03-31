@@ -92,7 +92,7 @@ fig = px.scatter(
         "x": False,  
         "y": False,  
         "TITLE": True,
-        "TYPE_RAW": Flase,
+        "TYPE_RAW": False,
         "Speaker": True
     },
     title="Talks Similarity (t-SNE View)",
