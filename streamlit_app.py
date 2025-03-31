@@ -10,7 +10,6 @@ from sklearn.manifold import TSNE
 
 st.set_page_config(page_title="Talks Similarity Viewer", layout="wide")
 
-# 🔧 Download spaCy model if not available
 try:
     nlp = spacy.load('en_core_web_lg')
 except OSError:
@@ -89,7 +88,13 @@ fig = px.scatter(
     color="TYPE",
     color_discrete_sequence=px.colors.qualitative.Alphabet,
     symbol="TYPE",
-    hover_data=["TITLE", "TYPE_RAW", "Speaker"],
+    hover_data={
+        "x": False,  
+        "y": False,  
+        "TITLE": True,
+        "TYPE_RAW": Flase,
+        "Speaker": True
+    },,
     title="Talks Similarity (t-SNE View)",
     labels={"x": "t-SNE Dimension 1", "y": "t-SNE Dimension 2"}
 )
