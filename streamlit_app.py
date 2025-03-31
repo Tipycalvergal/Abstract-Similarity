@@ -97,11 +97,11 @@ with st.spinner("Loading data..."):
 
 st.subheader("📊 t-SNE Projection of Talks")
 st.markdown("""
+---
 ### 🧭 How to Use
 1. **Hover** over any point to explore talk metadata — including the talk **title**, **type**, and **speaker**.
 2. **Double-click a category label** in the legend (on the right side) to isolate that talk type.
    - You can also **single-click** other types to toggle them on/off.
----
 """, unsafe_allow_html=True)
 
 fig = px.scatter(
