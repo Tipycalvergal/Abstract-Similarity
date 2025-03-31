@@ -95,7 +95,7 @@ with st.spinner("Loading data..."):
     df_plot.sort_values("TYPE", inplace=True)
 
 
-st.subheader("📊 t-SNE Projection of Talks")
+st.markdown("<h2 style='text-align: center;'>📊 t-SNE Projection of Talks</h2>", unsafe_allow_html=True)
 st.markdown("""
 ---
 ### 🧭 How to Use
