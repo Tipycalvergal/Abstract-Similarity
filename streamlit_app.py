@@ -59,8 +59,6 @@ Each point in the scatter plot represents a talk. Talks that are **closer togeth
 - 📉 **t-SNE Projection**: These vectors are reduced to two dimensions using t-SNE for visualization.
 - 📊 **Interactive Plot**: Talks are colored by their type (e.g., *Plenary Talk*, *MS01*, etc.) for easy identification.
 
----
-
 """, unsafe_allow_html=True)
 
 # 📄 Load data
