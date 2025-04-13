@@ -61,7 +61,6 @@ df.sort_values("TYPE", inplace=True)
 
 
 st.title("📚 Talks Similarity Dashboard")
-st.markdown("<h2 style='text-align: center;'>📊 t-SNE Projection of Talks</h2>", unsafe_allow_html=True)
 
 df_plot = pd.DataFrame({
         "Title": df["TITLE"],
