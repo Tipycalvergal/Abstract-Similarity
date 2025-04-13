@@ -59,9 +59,6 @@ sorted_type_list = sorted(unique_types, key=type_sort_key)
 df["TYPE"] = pd.Categorical(df["SIMPLIFIED_TYPE"], categories=sorted_type_list, ordered=True)
 df.sort_values("TYPE", inplace=True)
 
-
-st.title("📚 Talks Similarity Dashboard")
-
 df_plot = pd.DataFrame({
         "Title": df["TITLE"],
         "TYPE_RAW": df["TYPE"],
