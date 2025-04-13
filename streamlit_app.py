@@ -17,7 +17,6 @@ except OSError:
         spacy.cli.download("en_core_web_lg")
     nlp = spacy.load('en_core_web_lg')
 
-# 🔧 Functions
 def smart_title(text):
     text = str(text).strip()
     if text.upper().startswith("MS"):
@@ -73,7 +72,6 @@ with st.spinner("Loading data..."):
     combined_vectors = list(nlp.pipe(df["COMBINED"].tolist()))
     vector_list = np.array([doc.vector for doc in combined_vectors])
 
-    similarity_matrix = cosine_similarity(vector_list)
     tsne = TSNE(n_components=2, random_state=42, perplexity=5, learning_rate="auto")
     tsne_results = tsne.fit_transform(vector_list)
 
