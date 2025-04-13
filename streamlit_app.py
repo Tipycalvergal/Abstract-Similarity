@@ -64,8 +64,6 @@ st.title("📚 Talks Similarity Dashboard")
 st.markdown("<h2 style='text-align: center;'>📊 t-SNE Projection of Talks</h2>", unsafe_allow_html=True)
 
 df_plot = pd.DataFrame({
-        "x": tsne_results[:, 0],
-        "y": tsne_results[:, 1],
         "Title": df["TITLE"],
         "TYPE_RAW": df["TYPE"],
         "TYPE": df["SIMPLIFIED_TYPE"],
