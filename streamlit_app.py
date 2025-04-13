@@ -1,21 +1,10 @@
+# plot.py
 import streamlit as st
 import pandas as pd
-import numpy as np
-import spacy
-import spacy.cli
 import plotly.express as px
 import re
-from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.manifold import TSNE
 
 st.set_page_config(page_title="Talks Similarity Viewer", layout="wide")
-
-try:
-    nlp = spacy.load('en_core_web_lg')
-except OSError:
-    with st.spinner("Downloading spaCy model..."):
-        spacy.cli.download("en_core_web_lg")
-    nlp = spacy.load('en_core_web_lg')
 
 def smart_title(text):
     text = str(text).strip()
@@ -60,38 +49,28 @@ Each point in the scatter plot represents a talk. Talks that are **closer togeth
 
 """, unsafe_allow_html=True)
 
-# 📄 Load data
-with st.spinner("Loading data..."):
-    df = pd.read_csv('talks.csv', usecols=["TITLE", "ABSTRACT", "TYPE", "FIRST_NAME", "LAST_NAME"])
-    df.fillna("", inplace=True)
-    df["COMBINED"] = df["TITLE"] + " " + df["ABSTRACT"]
-    df["FULL_NAME"] = df["FIRST_NAME"] + " " + df["LAST_NAME"]
-    df["TYPE_RAW"] = df["TYPE"]
-    df["SIMPLIFIED_TYPE"] = df["TYPE"].apply(smart_title)
 
-    combined_vectors = list(nlp.pipe(df["COMBINED"].tolist()))
-    vector_list = np.array([doc.vector for doc in combined_vectors])
+df = pd.read_csv("vectorised.csv")
+df["SIMPLIFIED_TYPE"] = df["TYPE"].apply(smart_title)
 
-    tsne = TSNE(n_components=2, random_state=42, perplexity=5, learning_rate="auto")
-    tsne_results = tsne.fit_transform(vector_list)
 
-    df_plot = pd.DataFrame({
+unique_types = df["SIMPLIFIED_TYPE"].unique().tolist()
+sorted_type_list = sorted(unique_types, key=type_sort_key)
+df["TYPE"] = pd.Categorical(df["SIMPLIFIED_TYPE"], categories=sorted_type_list, ordered=True)
+df.sort_values("TYPE", inplace=True)
+
+
+st.title("📚 Talks Similarity Dashboard")
+st.markdown("<h2 style='text-align: center;'>📊 t-SNE Projection of Talks</h2>", unsafe_allow_html=True)
+
+df_plot = pd.DataFrame({
         "x": tsne_results[:, 0],
         "y": tsne_results[:, 1],
-        "TITLE": df["TITLE"],
-        "TYPE_RAW": df["TYPE_RAW"],
+        "Title": df["TITLE"],
+        "TYPE_RAW": df["TYPE"],
         "TYPE": df["SIMPLIFIED_TYPE"],
-        "Speaker": df["FULL_NAME"]
+        "Speaker": df["Speaker"]
     })
-
-    df_order = pd.read_csv('MS_Topics_Combined_String.csv', usecols=["MS Topic"])
-    df_order["MS Topic"] = df_order["MS Topic"].apply(smart_title)
-
-    unique_types = df_plot["TYPE"].unique().tolist()
-    sorted_type_list = sorted(unique_types, key=type_sort_key)
-    df_plot["TYPE"] = pd.Categorical(df_plot["TYPE"], categories=sorted_type_list, ordered=True)
-    df_plot.sort_values("TYPE", inplace=True)
-
 
 st.markdown("<h2 style='text-align: center;'>📊 t-SNE Projection of Talks</h2>", unsafe_allow_html=True)
 st.markdown("""
@@ -103,7 +82,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 fig = px.scatter(
-    df_plot,
+    df,
     x="x",
     y="y",
     color="TYPE",
@@ -113,7 +92,6 @@ fig = px.scatter(
         "x": False,  
         "y": False,  
         "TITLE": True,
-        "TYPE_RAW": False,
         "Speaker": True
     },
     title="Talks Similarity (t-SNE View)",
