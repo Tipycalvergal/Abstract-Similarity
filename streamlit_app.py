@@ -93,8 +93,8 @@ fig = px.scatter(
 )
 
 fig.update_layout(
-    xaxis=dict(range=[-50, 50], autorange=False),  # <- Replace with your own x-range
-    yaxis=dict(range=[-60, 60], autorange=False)   # <- Replace with your own y-range
+    xaxis=dict(range=[-60, 60], autorange=False),  
+    yaxis=dict(range=[-60, 60], autorange=False)   
 )
 
 st.plotly_chart(fig, use_container_width=True)
