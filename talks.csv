@@ -942,7 +942,7 @@ S.Y. Hon, C. Li, R.L. Sormani, R. Krause, S. Serra-Capizzano, \emph{Symbol-based
 "
 153,Sean,Hon,"MS19: Explicit and hidden asymptotic structures, GLT Analysis, and applications",An optimal parallel-in-time preconditioner for parabolic optimal control problems,"In this talk, we propose a novel diagonalization-based preconditioner for the all-at-once linear system arising from the optimal control problem of parabolic equations. The proposed preconditioner is constructed using an $\epsilon$-circulant modification of the rotated block diagonal preconditioning technique, which can be efficiently diagonalized via fast Fourier transforms in a parallel-in-time fashion. When the generalized minimal residual method is applied to the preconditioned system, we show that, with an appropriate choice of $\epsilon$, the convergence rate achieves linearity, independent of the matrix size and the regularization parameter. This is joint work with Xue-Lei Lin and Po Yin Fung."
 154,Fan,Chung,Plenary talk,Linear algebra methods for Boolean functions,"We consider Boolean functions that maps binary strings of length $n$ to $\{\mathtt{True}, \mathtt{False}\}$.
-We examine a number of analytic and combinatorial properties of Boolean functions and organize these properties into a hierarchy of equivalence classes in a similar style as  quasi-random graphs.  In addition, we will relate these properties to various extant notions of pseudo-randomness for Boolean functions."
+We examine a number of analytic and combinatorial properties of Boolean functions and organize these properties into a hierarchy of equivalence classes in a similar style as quasi-random graphs.  In addition, we will relate these properties to various extant notions of pseudo-randomness for Boolean functions."
 155,Hiromichi,Ohno,MS29: Matrix functions and related topics,"Generalization of B\""ottcher-Wenzel inequality and its application","The B\""ottcher-Wenzel inequality states that the Hilbert-Schmidt norm of the commutator of matrices $A$ and $B$ is less than or equal to $\sqrt{2}$ times the product of the Hilbert-Schmidt norms of $A$ and $B$. In this talk, we discuss generalizations of the B\""ottcher-Wenzel inequality in which the Hilbert-Schmidt norm is replaced by a weighted Hilbert-Schmidt norm. An application to the uncertainty relation is also considered."
 156,Takeaki,Yamazaki,MS10: Matrix means and related topics,Stability of AN-operators under functional calculus,"This talk is based on [1].
 Let $\mathcal{B}(H)$ be the set of all bounded linear operators on a complex Hilbert space. An operator $T\in \mathcal{B}(H)$ satisfies $\mathcal{AN}$-property if and only if for any closed subspace $K$ of $H$, there exists a unit vector $x\in K$ such that $\|T|_{K}\|=\|T|_{K}x\|$. The set of operators satisfying $\mathcal{AN}$-property is not closed. 
@@ -1408,7 +1408,7 @@ Ideally the method could be generalized for $r > 2$, but it is still under consi
 N. Gillis, D. Kuang, H. Park, ''Hierarchical clustering of hyperspectral images using rank-two nonnegative matrix factorization'', {\it IEEE Transactions on Geoscience and
 Remote Sensing} (2014)
 \end{thebibliography}"
-225,Raphael,Loewy,MS24: Nonnegative and related families of matrices,On cones of polynomials preserving nonnegative matrices,"We consider polynomials preserving nonnegative matrices. Let $n$ be a positive integer and
+225,Raphael,Loewy,Canceled,On cones of polynomials preserving nonnegative matrices,"We consider polynomials preserving nonnegative matrices. Let $n$ be a positive integer and
 
 \begin{equation*}
 {\mathcal{P}}_{n}=\{p \in {{\mathbb{R}}}[x]: p(A)\geq 0 \text{ for all }  A \geq 0, A \in {\mathbb{R}}^{n,n}\}.
@@ -1872,7 +1872,7 @@ The results are illustrated by numerical experiments.
 %
 This is joint work with Rasmus Jensen, IMADA, University of Southern Denmark. 
 "
-286,Sivakumar,K.C.,MS24: Nonnegative and related families of matrices,"Inverse $Z$-matrices with the bi-diagonal south-west structure
+286,Sivakumar,K.C.,Canceled,"Inverse $Z$-matrices with the bi-diagonal south-west structure
 ","Two new matrix classes are introduced; inverse cyclic matrices and bi-diagonal south-west matrices. An interesting relation is established between these classes. Applications to two classes of inverse $Z$-matrices are provided.
 "
 287,Ming-Cheng,Tsai,"MS35: Preserver Problems, II","Multiplicative trace and spectrum preservers  on   nonnegative and stochastic matrices
@@ -2261,7 +2261,7 @@ We demonstrate how this integration facilitates the efficient computation of eig
 where $\mathbf{a}(z)$ and $\mathbf{b}(z)$ are matrix polynomials with their own linearizations. This combined approach reduces computational complexity while maintaining numerical stability, making it a scalable and practical solution for large-scale polynomial eigenvalue problems. This talk will highlight the theoretical framework and discuss how this integration enhances the efficiency and robustness of algebraic linearizations.
 
 "
-335,Sivan,Toledo,MS13: Advances in QR factorizations,"Parallel-in-time Kalman smoothing using orthogonal transformations
+335,Sivan,Toledo,Canceled,"Parallel-in-time Kalman smoothing using orthogonal transformations
 ","The talk will present a numerically-stable parallel-in-time linear 
 Kalman smoother. The smoother uses a novel highly parallel
 QR factorization for a class of structured sparse
@@ -2423,15 +2423,46 @@ This is joint work with Prof. Trung Hoa Dinh and Prof. Tin Yau Tam."
 360,Laureano,Gonzalez-Vega,"MS30: Bohemian matrices: Theory, applications, and explorations",On Bohemian correlation matrices,"Bohemian matrices are families of matrices whose entries come from a fixed discrete set of
 small integers. A symmetric matrix is a correlation matrix if it has ones on the diagonal and
 its eigenvalues are nonnegative. We will introduce a new characterization of correlation
-matrices that will be used to show that the number of Bohemian Correlation Matrices over -
-1, 0 and 1 corresponds to OEIS A000110 and to solve some correlation matrix completion
-problems."
+matrices that will be used to show that the number of Bohemian Correlation Matrices over $-1$, $0$ and $1$ corresponds to OEIS A000110 and to solve some correlation matrix completion problems."
 361,Saptak,Bhattacharya,MS7: Linear algebra and quantum information science,Approximate recoverability and the quantum data processing inequality,"In this talk, we discuss the quantum data processing inequality and its refinements that are physically meaningful in the context of approximate recoverability. An important conjecture regarding this due to Seshadreesan et. al. in J. Phys. A: Math. Theor. 48 (2015) is disproved, our approach to the problem relying heavily on log-convexity techniques. We then prove some sharp inequalities capturing universal approximate recoverability with the Petz recovery map for the sandwiched quasi and R\'enyi relative entropies for the parameter $t =2$. Our techniques also lead to some interesting inequalities with conditional expectations and partial traces, which can be of independent interest.
 "
-362,Man-Duen,Choi,MS7: Linear algebra and quantum information science,Quantum Information in terms of two by two matrices,This provides the down-to-earth description of quantum computers in terms of two by two matrices.
+362,Man-Duen,Choi,MS7: Linear algebra and quantum information science,Quantum information in terms of two by two matrices,This provides the down-to-earth description of quantum computers in terms of two by two matrices.
 363,Hsien-Yi,Hsieh,MS7: Linear algebra and quantum information science,Machine learning enhanced quantum state tomography,"Quantum state tomography is a fundamental tool in quantum information science, enabling the characterization and diagnosis of quantum states through numerical methods. In this work, we explore the use of machine learning techniques to accelerate the inference of continuous-variable (CV) quantum states. Specifically, we demonstrate how convolutional neural networks (CNNs) can be employed to efficiently infer compressed representations of CV quantum states. Furthermore, we present a machine-learning-assisted framework for Bayesian quantum state tomography, which enhances reconstruction accuracy and computational efficiency. We also discuss recent advances in operator learning methods and examine the mathematical behavior of learning CV quantum states in function space."
 364,Ching-Kai,Lin,MS11: Structured matrix computations and its applications,Estimation of noise covariances in Kalman filtering by structure preserving doubling algorithm,"Nowadays, with the rapid development of aerospace, military, and autonomous vehicles, Kalman filtering has emerged as a prevalent technique for real-time object detection and tracking. However, practical implementation encounters challenges due to the unknown state noise covariance matrix and measurement noise covariance matrix, leading to degraded prediction accuracy. Therefore, efficient and swift estimation methods are imperative.
 
 Over the years, various approaches have been proposed, categorized into Bayesian, maximum likelihood, covariance matching, and correlation techniques. Among these, Autocovariance Least-Squares (ALS) is widely employed. Nonetheless, its application to high-dimensional problems can be time-consuming, hampering the real-time predictability of Kalman filtering.
 
 In the speak, we propose a novel method that integrates techniques from Mehra's and Lingyi Zhang's teams, augmented by Structure-Preserving Doubling Algorithms (SDA). This modified approach not only significantly enhances computational speed but also preserves the symmetric semi-normal nature of the noise covariance matrix. Finally, experimental results demonstrate that our modified method achieves a speed improvement of 2 to 4 times compared to ALS."
+365,Karol,Życzkowski,MS8: Tensor and quantum information science,Blockwise bistochastic matrices and operator majorisation,"As any discrete dynamics in classical simplex  $\Delta_N$
+can be described by a stochastic matrix,  $p'=Sp$,
+we introduce an analogous dynamics in the space of 
+quantum measurements, often referred to as positive operator-valued measurement (POVM).
+Such a measurement is defined by set of positive operators, $P_j = P_j^{\dagger}\ge 0$,
+summing to identity, $\sum_i P_i={\mathbbm I}$. Transformations in the set of quantum measurements can be described by blockwise stochastic transition matrices 
+$\bf T$, composed of positive definite blocks, $T_{ij}=T_{ij}^*$, that sum columnwise to
+identity, $\sum_i T_{ij}= {\mathbbm I}$. 
+The notion of sequential block product of matrices 
+$P'={\bf T} * P$, 
+induces the transformation,
+$P'_i = \sum_j \sqrt{P_j} T_{ij}  \sqrt{P_j}$
+which corresponds to a sequence of quantum measurements. 
+
+Imposing additionally the dual condition that the sum of blocks in each row is equal
+to identity we arrive at blockwise bistochastic matrices, sometimes called 
+quantum magic squares. Analyzing their dynamical properties, we formulate a quantum
+analog of the Ostrowski description of the classical Birkhoff polytope and introduce
+the notion of operator  majorization. Our framework
+provides a dynamical characterization of the set of blockwise bistochastic
+matrices and establishes a resource theory in the set of quantum measurements.
+
+* joint work with Albert Rico (Barcelona), Moises Moran (Ankara) and Shmuel Fridland (Chicago) "
+366,Jamie,Pommersheim,"MS30: Bohemian matrices: Theory, applications, and explorations",Distinct spectra of integer matrices and closed walk matrices of graphs,"Recent work with A. Abrams, Z. Landau, and N. Srivastava gave an explicit construction of $n\times n$ matrices with entries in $[0,h]$ with two eigenvalues separated by an extremely small gap, at most $h^{-n^2/16 + o(n^2)}$. A result of the construction is a large collection, roughly $h^{n^2/4}$ matrices with height bounded by $h$, all of which have distinct characteristic polynomials. If one is interested in $0$-$1$ matrices, the construction produces a collection of roughly $2^{n^2/16}$ matrices with distinct characteristic polynomials. A natural question is whether one can
+achieve a similar result for symmetric matrices of bounded height or symmetric $0$-$1$ matrices, i.e, adjacency matrices of graphs. This talk will explore these results and questions, as well as related questions about the closed walk matrix of a graph."
+367,Sang-Gyun,Youn,MS7: Linear algebra and quantum information science,Reverse data-processing inequalities for partial transposes of random quantum states,"The quantum data processing inequality (QDPI) states that quantum relative entropy cannot be increased by local physical operations. However, the partial transposition can be used to increase the quantum relative entropy on random quantum states with probability one. We explain why such an unexpected phenomenon happens in view of random matrix theory and free probability."
+368,Davide,Bianchi,MS4: Linear algebra methods for inverse problems and data assimilation,A data-dependent regularization method based on the graph Laplacian,"Differential operators are widely used for regularizing ill-posed problems in imaging. In this work, we propose a variational method that embeds a graph Laplacian operator in the regularization term. The novelty of this approach lies in constructing the graph Laplacian based on a preliminary approximation of the solution, obtained using any existing reconstruction method from the literature. Consequently, the regularization term becomes both data- and noise-adaptive.
+
+We demonstrate that the proposed method is both regularizing and stable, enabling high-quality approximations of the ground truth solution. Notably, when combined with a deep neural network (DNN), this approach achieves outstanding results by integrating the regularization properties of the method with the accuracy of a well-trained DNN. 
+
+This presentation is primarily based on the work [1].
+
+[1] D. Bianchi, D. Evangelista, S. Aleotti, M. Donatelli, E. L. Piccolomini, and W. Li, “A data-dependent regularization method based on the graph Laplacian,” SIAM Journal on Scientific Computing, vol. 47, no. 2, pp. C369–C398, 2025."
